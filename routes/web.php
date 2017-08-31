@@ -14,3 +14,7 @@
 Route::get('/', 'StaticPagesController@home')->name('home');
 Route::get('contact', 'StaticPagesController@contact')->name('contact');
 Route::get('about', 'StaticPagesController@about')->name('about');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
