@@ -20,4 +20,8 @@ class StaticPagesController extends Controller
 	{
 		return view('pages.about');
 	}
+
+	public function form(){
+		return view('pages.form');
+	}
 }

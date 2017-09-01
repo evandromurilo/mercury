@@ -1,0 +1,17 @@
+.form{
+width: 50%;
+ margin: 0px auto;
+
+}
+#exampleInputIdade{
+  width: 80px;
+}
+#datetimepicker1{
+  width: 200px;
+}
+#exampleInputfone{
+  width: 200px;
+}
+#exampleInputCelular{
+  width: 200px;
+}
