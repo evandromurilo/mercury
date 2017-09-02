@@ -3,10 +3,12 @@
 	<head>
 		<title>Mercury | @yield('title', 'Home')</title>
 		<meta charset="utf-8">
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
 		integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
 		<link href="{{ asset('css/style_form.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/style_navbar.css') }}" rel="stylesheet">
 
 		<script src="https://use.fontawesome.com/2487cfdf7c.js"></script>
 

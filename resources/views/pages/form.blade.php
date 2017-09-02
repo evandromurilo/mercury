@@ -8,7 +8,7 @@
 @section('content')
 <form method="post" >
 <fieldset class="col-md-6 form">
-  <legend>Detalhe da Propaganda</legend><br>
+  <legend id="legenda-form">Detalhe da Propaganda</legend><br>
   <div class="form-group align-items-center">
     <div class="form-group">
       <label for="exampleInputNome">Nome Completo</label>
