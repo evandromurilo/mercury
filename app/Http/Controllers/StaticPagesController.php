@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\FormRequest;
+use App\Http\Requests;
 
 class StaticPagesController extends Controller
 {
@@ -24,4 +26,14 @@ class StaticPagesController extends Controller
 	public function form(){
 		return view('pages.form');
 	}
+
+	public function post_validate(FormRequest $request){
+
+		$data = $request->all();
+
+		dd($data);
+
+	}
+
+
 }

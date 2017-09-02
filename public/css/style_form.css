@@ -20,3 +20,10 @@ width: 50%;
 #exampleInputCelular{
   width: 200px;
 }
+
+.size_alert{
+  height: 20px;
+  font-size: 12px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
