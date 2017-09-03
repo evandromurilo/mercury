@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\FormRequest;
+use App\Http\Requests\AuthenticationForm;
 use App\Http\Requests;
 
 class StaticPagesController extends Controller
@@ -27,7 +27,7 @@ class StaticPagesController extends Controller
 		return view('pages.form');
 	}
 
-	public function post_validate(FormRequest $request){
+	public function post_validate(AuthenticationForm $request){
 
 		$data = $request->all();
 

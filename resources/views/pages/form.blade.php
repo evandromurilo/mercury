@@ -13,13 +13,20 @@
   <div class="form-group align-items-center">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
   </div>
+  @if(count($errors) > 0)
+    <div class="alert alert-danger size_alert">
+      <ul>
+        @foreach($errors->all() as $error)
+          <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+  @endif
     <div class="form-group">
       <label for="exampleInputNome">Nome Completo</label>
-      <input type="text" name="nome" class="form-control" id="exampleInputNome" aria-describedby="nomelHelp" placeholder="Ex. José ...">
+      <input type="text" name="nome" class="form-control" value="{{ old('nome') }}" id="exampleInputNome" aria-describedby="nomelHelp" placeholder="Ex. José ...">
     </div>
-      @if ($errors->any())
-                <p class="alert alert-danger size_alert">Você precisa informar um Nome Valido!</p>
-      @endif
+
     <div class="form-group">
       <label for="exampleInputProfissao">Profissão</label>
       <input type="text" name="profissao" class="form-control" id="exampleInputProfissao" placeholder="Ex. Montador de ar ...">
