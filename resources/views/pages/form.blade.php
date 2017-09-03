@@ -7,40 +7,38 @@
 @endsection
 @section('content')
 
+
 <form method="post" action="/post_validate" >
 <fieldset class="col-md-6 form">
   <legend id="legenda-form">Detalhe da Propaganda</legend><br>
   <div class="form-group align-items-center">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
   </div>
-  @if(count($errors) > 0)
-    <div class="alert alert-danger size_alert">
-      <ul>
-        @foreach($errors->all() as $error)
-          <li>{{ $error }}</li>
-        @endforeach
-      </ul>
-    </div>
-  @endif
+
     <div class="form-group">
       <label for="exampleInputNome">Nome Completo</label>
       <input type="text" name="nome" class="form-control" value="{{ old('nome') }}" id="exampleInputNome" aria-describedby="nomelHelp" placeholder="Ex. José ...">
     </div>
+    @if ($errors->has('nome'))
+      <div class="alert alert-danger size_alert">{{ $errors->first('nome') }}</div>
+    @endif
 
     <div class="form-group">
       <label for="exampleInputProfissao">Profissão</label>
-      <input type="text" name="profissao" class="form-control" id="exampleInputProfissao" placeholder="Ex. Montador de ar ...">
+      <input type="text" name="profissao" class="form-control" value="{{ old('profissao') }}" id="exampleInputProfissao" placeholder="Ex. Montador de ar ...">
     </div>
-    @if ($errors->any())
-              <p class="alert alert-danger size_alert">Você precisa informar um Profissão Valida!</p>
+    @if ($errors->has('profissao'))
+      <div class="alert alert-danger size_alert">{{ $errors->first('profissao') }}</div>
     @endif
+
     <div class="form-group">
       <label for="exampleInputIdade">Idade</label>
-      <input type="text" name="idade" class="form-control" id="exampleInputIdade" placeholder="Ex. 23">
+      <input type="text" name="idade" class="form-control" value="{{ old('idade') }}" id="exampleInputIdade" placeholder="Ex. 23">
     </div>
-    @if ($errors->any())
-              <p class="alert alert-danger size_alert">O Campo Idade Não e Valido!</p>
+    @if ($errors->has('idade'))
+      <div class="alert alert-danger size_alert">{{ $errors->first('idade') }}</div>
     @endif
+
 
               <div class="form-group">
                 <label for="exampleInputNascimento">Data de Nascimento</label>
@@ -74,30 +72,33 @@
 
         <div class="form-group">
           <label for="exampleInputEndereco">Endereço</label>
-          <input type="text" name="endereco" class="form-control" id="exampleInputEndereco" placeholder="Ex. Rua Branderante, Bairro São Miguel, N°0000">
+          <input type="text" name="endereco" class="form-control" value="{{ old('endereco') }}" id="exampleInputEndereco" placeholder="Ex. Rua Branderante, Bairro São Miguel, N°0000">
         </div>
-        @if ($errors->any())
-                  <p class="alert alert-danger size_alert">O Campo Endereço deve ser fornecido corretamente!</p>
+        @if ($errors->has('endereco'))
+          <div class="alert alert-danger size_alert">{{ $errors->first('endereco') }}</div>
         @endif
+
         <div class="form-group">
           <label for="exampleInputEmail">E-mail</label>
-          <input type="email" class="form-control" id="exampleInputEmail" placeholder="Ex. jose_jipa@gmail.bom">
+          <input type="email" name="email" class="form-control" value="{{ old('email') }}" id="exampleInputEmail" placeholder="Ex. jose_jipa@gmail.bom">
         </div>
+        @if ($errors->has('email'))
+          <div class="alert alert-danger size_alert">{{ $errors->first('email') }}</div>
+        @endif
 
         <div class="form-group">
           <label for="exampleInputFone">Telefone</label>
-          <input type="text" name="fone" class="form-control" id="exampleInputfone" placeholder="Ex. (xx) 0000-0000">
+          <input type="text" name="fone" class="form-control" value="{{ old('fone') }}" id="exampleInputfone" placeholder="Ex. (xx) 0000-0000">
         </div>
-        @if ($errors->any())
-                  <p class="alert alert-danger size_alert">O Campo Telefone não e Valido!</p>
+        @if ($errors->has('fone'))
+          <div class="alert alert-danger size_alert">{{ $errors->first('fone') }}</div>
         @endif
+
         <div class="form-group">
           <label for="exampleInputCelular">Celular</label>
           <input type="text" name="celular" class="form-control" id="exampleInputCelular" placeholder="Ex. (xx) 0000-0000">
         </div>
-        @if ($errors->any())
-                  <p class="alert alert-danger size_alert">O Campo Celular não e Valido!</p>
-        @endif
+
     <button type="submit" class="btn btn-primary">Salvar</button>
       </div>
     </fieldset>
