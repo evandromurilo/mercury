@@ -50,6 +50,6 @@ class StaticPagesController extends Controller
 
 		$ad->save();
 
-		return redirect('/form2');
+		return view('pages.index')->with('ads', \App\Advertising::all());
 	}
 }
