@@ -11,7 +11,7 @@
 		<link href="{{ asset('css/style_form.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/style_navbar.css') }}" rel="stylesheet">
 
-		<!--<script src="https://use.fontawesome.com/2487cfdf7c.js"></script>-->
+		<script src="https://use.fontawesome.com/2487cfdf7c.js"></script>
 
 	</head>
 	<body>
