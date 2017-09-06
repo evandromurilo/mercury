@@ -17,7 +17,7 @@
 
     <div class="form-group">
       <label for="exampleInputNome">Nome</label>
-      <input type="text" name="name" class="form-control" value="{{ old('name') }}" id="exampleInputNome" aria-describedby="nomelHelp" placeholder="Ex. José ...">
+      <input type="text" name="name" class="form-control" value="{{ old('name') }}" autocomplete="off" id="exampleInputNome" aria-describedby="nomelHelp" placeholder="Ex. José ...">
     </div>
     @if ($errors->has('name'))
       <div class="alert alert-danger size_alert">{{ $errors->first('name') }}</div>
@@ -25,7 +25,7 @@
 
     <div class="form-group">
       <label for="exampleInputProfissao">Descrição</label>
-      <input type="text" name="description" class="form-control" value="{{ old('description') }}" id="exampleInputProfissao" placeholder="Ex. Montador de ar ...">
+      <input type="text" name="description" class="form-control" value="{{ old('description') }}" autocomplete="off" id="exampleInputProfissao" placeholder="Ex. Montador de ar ...">
     </div>
     @if ($errors->has('description'))
       <div class="alert alert-danger size_alert">{{ $errors->first('description') }}</div>

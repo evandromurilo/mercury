@@ -7,7 +7,7 @@ use App\Http\Requests\AuthenticationForm;
 use App\Http\Requests\AuthenticationForm2;
 use App\Http\Requests;
 use App\Advertising;
-		
+
 
 class StaticPagesController extends Controller
 {
@@ -50,6 +50,10 @@ class StaticPagesController extends Controller
 
 		$ad->save();
 
+		return view('pages.index')->with('ads', \App\Advertising::all());
+	}
+
+	public function propaganda(){
 		return view('pages.index')->with('ads', \App\Advertising::all());
 	}
 }
