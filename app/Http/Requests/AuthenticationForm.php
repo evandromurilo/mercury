@@ -36,7 +36,7 @@ class AuthenticationForm extends FormRequest
             'celular' => ['required', 'min:8', 'max:11']
         ];
         [
-            'nome.required' => 'Preencha o Campo Nome por favor!',
+            'nome.required' => 'O Campo Nome e necessário por favor!',
             'nome.min' => 'O Nome Deve Possuir mais de 8 caracteres !',
             'profissao.required' => 'O Campo Profissão deve ser preenchido!',
             'profissao.min' => 'O Campo deve Possuir mais de 4 caracteres',

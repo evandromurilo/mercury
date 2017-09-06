@@ -40,34 +40,46 @@
     @endif
 
 
+
+        <div class="row">
+            <div class='col-sm-offset-4 col-sm-4'>
               <div class="form-group">
                 <label for="exampleInputNascimento">Data de Nascimento</label>
-                  <div class='input-group date' id='datetimepicker1'>
-                      <input type='text' class="form-control" />
+                  <div class='input-group date'>
+                      <input type='text' class="form-control datepicker"  id='calendario' name="date" value="{{ old('date') }}"  />
                       <span class="input-group-addon">
                           <span class="fa fa-calendar"></span>
                       </span>
                   </div>
               </div>
-
-          <script type="text/javascript">
-              $(function () {
-                  $('#datetimepicker1').datetimepicker();
+            </div>
+        </div>
+      <script>
+            $(function() {
+                $("#calendario").datepicker({
+                  dateFormat: 'dd-mm-yy',
+                  locale: 'pt-br'
               });
-          </script>
+            });
+      </script>
+      <script>
+                $(function() {
+                    $( "#calendario" ).datepicker();
+                });
+      </script>
 
         <div class="form-group">
-        <label for="exampleInputSexo">Sexo</label><br>
-          <label class="custom-control custom-radio">
-            <input id="radio1" name="sexo" type="radio" value="homem" class="custom-control-input">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Homem</span>
-          </label>
-          <label class="custom-control custom-radio">
-            <input id="radio2" name="sexo" type="radio" value="mulher" class="custom-control-input">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Mulher</span>
-          </label>
+          <label for="exampleInputSexo">Sexo</label><br>
+            <label class="custom-control custom-radio">
+              <input id="radio1" name="sexo" type="radio" value="homem" class="custom-control-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Homem</span>
+            </label>
+            <label class="custom-control custom-radio">
+              <input id="radio2" name="sexo" type="radio" value="mulher" class="custom-control-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Mulher</span>
+            </label>
         </div>
 
         <div class="form-group">
@@ -103,5 +115,6 @@
       </div>
     </fieldset>
 </form>
+
 
 @endsection
