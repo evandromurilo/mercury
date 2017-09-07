@@ -20,3 +20,5 @@ Route::post('post_validate', 'StaticPagesController@post_validate')->name('form'
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('ads', 'AdsController');
