@@ -17,26 +17,26 @@
 
     <div class="form-group">
       <label for="exampleInputNome">Nome Completo</label>
-      <input type="text" name="nome" class="form-control" value="{{ old('nome') }}" id="exampleInputNome" aria-describedby="nomelHelp" placeholder="Ex. José ...">
+      <input type="text" name="full_name" class="form-control" value="{{ old('full_name') }}" id="exampleInputNome" aria-describedby="nomelHelp" placeholder="Ex. José ...">
     </div>
-    @if ($errors->has('nome'))
-      <div class="alert alert-danger size_alert">{{ $errors->first('nome') }}</div>
+    @if ($errors->has('full_name'))
+      <div class="alert alert-danger size_alert">{{ $errors->first('full_name') }}</div>
     @endif
 
     <div class="form-group">
       <label for="exampleInputProfissao">Profissão</label>
-      <input type="text" name="profissao" class="form-control" value="{{ old('profissao') }}" id="exampleInputProfissao" placeholder="Ex. Montador de ar ...">
+      <input type="text" name="description" class="form-control" value="{{ old('description') }}" id="exampleInputProfissao" placeholder="Ex. Montador de ar ...">
     </div>
-    @if ($errors->has('profissao'))
-      <div class="alert alert-danger size_alert">{{ $errors->first('profissao') }}</div>
+    @if ($errors->has('description'))
+      <div class="alert alert-danger size_alert">{{ $errors->first('description') }}</div>
     @endif
 
     <div class="form-group">
       <label for="exampleInputIdade">Idade</label>
-      <input type="text" name="idade" class="form-control" value="{{ old('idade') }}" id="exampleInputIdade" placeholder="Ex. 23">
+      <input type="text" name="age" class="form-control" value="{{ old('age') }}" id="exampleInputIdade" placeholder="Ex. 23">
     </div>
-    @if ($errors->has('idade'))
-      <div class="alert alert-danger size_alert">{{ $errors->first('idade') }}</div>
+    @if ($errors->has('age'))
+      <div class="alert alert-danger size_alert">{{ $errors->first('age') }}</div>
     @endif
 
 
@@ -46,7 +46,7 @@
               <div class="form-group">
                 <label for="exampleInputNascimento">Data de Nascimento</label>
                   <div class='input-group date'>
-                      <input type='text' class="form-control datepicker"  id='calendario' name="date" value="{{ old('date') }}"  />
+                      <input type='text' class="form-control datepicker"  id='calendario' name="birthday" value="{{ old('birthday') }}"  />
                       <span class="input-group-addon">
                           <span class="fa fa-calendar"></span>
                       </span>
@@ -71,12 +71,12 @@
         <div class="form-group">
           <label for="exampleInputSexo">Sexo</label><br>
             <label class="custom-control custom-radio">
-              <input id="radio1" name="sexo" type="radio" value="homem" class="custom-control-input">
+              <input id="radio1" name="gender" type="radio" value="homem" class="custom-control-input">
                 <span class="custom-control-indicator"></span>
                 <span class="custom-control-description">Homem</span>
             </label>
             <label class="custom-control custom-radio">
-              <input id="radio2" name="sexo" type="radio" value="mulher" class="custom-control-input">
+              <input id="radio2" name="gender" type="radio" value="mulher" class="custom-control-input">
                 <span class="custom-control-indicator"></span>
                 <span class="custom-control-description">Mulher</span>
             </label>
@@ -84,10 +84,10 @@
 
         <div class="form-group">
           <label for="exampleInputEndereco">Endereço</label>
-          <input type="text" name="endereco" class="form-control" value="{{ old('endereco') }}" id="exampleInputEndereco" placeholder="Ex. Rua Branderante, Bairro São Miguel, N°0000">
+          <input type="text" name="address" class="form-control" value="{{ old('address') }}" id="exampleInputEndereco" placeholder="Ex. Rua Branderante, Bairro São Miguel, N°0000">
         </div>
-        @if ($errors->has('endereco'))
-          <div class="alert alert-danger size_alert">{{ $errors->first('endereco') }}</div>
+        @if ($errors->has('address'))
+          <div class="alert alert-danger size_alert">{{ $errors->first('address') }}</div>
         @endif
 
         <div class="form-group">
@@ -100,15 +100,15 @@
 
         <div class="form-group">
           <label for="exampleInputFone">Telefone</label>
-          <input type="text" name="fone" class="form-control" value="{{ old('fone') }}" id="exampleInputfone" placeholder="Ex. (xx) 0000-0000">
+          <input type="text" name="phone" class="form-control" value="{{ old('phone') }}" id="exampleInputfone" placeholder="Ex. (xx) 0000-0000">
         </div>
-        @if ($errors->has('fone'))
-          <div class="alert alert-danger size_alert">{{ $errors->first('fone') }}</div>
+        @if ($errors->has('phone'))
+          <div class="alert alert-danger size_alert">{{ $errors->first('phone') }}</div>
         @endif
 
         <div class="form-group">
           <label for="exampleInputCelular">Celular</label>
-          <input type="text" name="celular" class="form-control" id="exampleInputCelular" placeholder="Ex. (xx) 0000-0000">
+          <input type="text" name="cell_phone" class="form-control" value="{{ ald('cell_phone') }}" id="exampleInputCelular" placeholder="Ex. (xx) 0000-0000">
         </div>
 
     <button type="submit" class="btn btn-primary">Salvar</button>

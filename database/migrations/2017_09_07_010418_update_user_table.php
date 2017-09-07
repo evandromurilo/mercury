@@ -18,6 +18,7 @@ class UpdateUserTable extends Migration
 		    $table->string('description');
 		    $table->string('address');
 		    $table->string('phone');
+        $table->string('cell_phone');
 		    $table->smallInteger('age');
 		    $table->boolean('gender');
 		    $table->date('birthday');
@@ -36,6 +37,7 @@ class UpdateUserTable extends Migration
 		    $table->dropColumn('description');
 		    $table->dropColumn('address');
 		    $table->dropColumn('phone');
+        $table->dropColumn('cell_phone');
 		    $table->dropColumn('age');
 		    $table->dropColumn('gender');
 		    $table->dropColumn('birthday');
