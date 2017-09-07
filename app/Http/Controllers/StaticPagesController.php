@@ -28,11 +28,26 @@ class StaticPagesController extends Controller
 	}
 
 	public function post_validate(AuthenticationForm $request){
-
+		$data = new 
 		$data = $request->all();
 
 		dd($data);
 
+	}
+
+	public function form2_validate(AuthenticationForm2 $request){
+	  $ad = new Advertising;
+
+	  $ad->name = $request->name;
+	  $ad->description = $request->description;
+
+	  $ad->save();
+
+	  return view('pages.index')->with('ads', \App\Advertising::all());
+	}
+
+	public function propaganda(){
+	  return view('pages.index')->with('ads', \App\Advertising::all());
 	}
 
 

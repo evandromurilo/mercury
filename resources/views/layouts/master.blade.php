@@ -12,6 +12,7 @@
 
 		<link href="{{ asset('css/style_form.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/style_navbar.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/style_page_advertisement.css') }}" rel="stylesheet">
 
 		<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -23,6 +24,8 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
 		 integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 		 <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
