@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in!
+                    <br>
+                    <a href="form">Form</a>
                 </div>
             </div>
         </div>

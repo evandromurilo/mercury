@@ -21,7 +21,7 @@ class UpdateUserTable extends Migration
         $table->string('cell_phone');
 		    $table->smallInteger('age');
 		    $table->boolean('gender');
-		    $table->date('birthday');
+		  //  $table->date('birthday');
 	    });
     }
 
@@ -40,7 +40,7 @@ class UpdateUserTable extends Migration
         $table->dropColumn('cell_phone');
 		    $table->dropColumn('age');
 		    $table->dropColumn('gender');
-		    $table->dropColumn('birthday');
+		  //  $table->dropColumn('birthday');
 	    });
     }
 }

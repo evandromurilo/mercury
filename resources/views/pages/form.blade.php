@@ -108,7 +108,7 @@
 
         <div class="form-group">
           <label for="exampleInputCelular">Celular</label>
-          <input type="text" name="cell_phone" class="form-control" value="{{ ald('cell_phone') }}" id="exampleInputCelular" placeholder="Ex. (xx) 0000-0000">
+          <input type="text" name="cell_phone" class="form-control" value="{{ old('cell_phone') }}" id="exampleInputCelular" placeholder="Ex. (xx) 0000-0000">
         </div>
 
     <button type="submit" class="btn btn-primary">Salvar</button>
