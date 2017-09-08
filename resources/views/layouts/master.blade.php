@@ -13,6 +13,8 @@
 		<link href="{{ asset('css/style_form.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/style_navbar.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/style_page_advertisement.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/style_ad_create.css') }}" rel="stylesheet">
+
 
 		<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -50,6 +52,14 @@
 				<li class="nav-item">
 					<a class="nav-link disabled" href="#">Não tem ainda</a>
 				</li>
+
+
+				<li class="nav navbar-nav navbar-right">
+					<a class="nav-link" href="login">Logar <i class="fa fa-user" aria-hidden="true"></i></a>
+				</li>
+				<li class="nav navbar-nav navbar-right">
+					<a class="nav-link"  href="register">Cria Conta <i class="fa fa-user-plus" aria-hidden="true"></i></a>
+				</li>
 			</ul>
 
 		</div>
@@ -58,6 +68,7 @@
 		</div>
 		<footer>
 			@include('partials/links')
+
 		</footer>
 	</body>
 </html>

@@ -19,6 +19,7 @@ body{
 
 h3{
   line-height: 35px;
+  text-align: center;
 }
 p{
   line-height: 18px;
@@ -30,8 +31,13 @@ p{
 }
 
 hr{
- padding-bottom: 5px;
+ height: 3px;
+ box-shadow: 0px -4px 4px #C0C0C0;
  margin-bottom: 10px;
-background-color: red;
+background: rgba(105, 105, 105, 1);
 width: 500px;
+}
+
+.space-img{
+  margin-left: 10px;
 }
