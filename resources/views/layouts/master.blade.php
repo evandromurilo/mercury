@@ -13,6 +13,8 @@
 		<link href="{{ asset('css/style_form.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/style_navbar.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/style_page_advertisement.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/style_ad_create.css') }}" rel="stylesheet">
+
 
 		<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -58,6 +60,7 @@
 		</div>
 		<footer>
 			@include('partials/links')
+
 		</footer>
 	</body>
 </html>

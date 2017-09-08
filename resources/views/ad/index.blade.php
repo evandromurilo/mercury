@@ -15,7 +15,7 @@
         class="rounded float-lenf img-thumbnail" alt="">
       </div>
       <div class="col-xs-6">
-        <h3>Titulo do anuncio</h3>
+        <h3 class="text text-center">Titulo do anuncio</h3>
 
           <p class="d-incline-block text-trucate" style="max-width: 300px;"> Comentario sobre a profissão o que faz da validation
           no que ele e bom, e qual o tipo de serviço dele icon </p>
@@ -23,12 +23,16 @@
           <p><a href="#">Informação sobre serviço</a></p>
           <p> contanto </p>
           <p><a href="#">visita o perfil</a></p>
-    
+
       </div>
     </div>
   </div>
   <hr/>
 @endfor
 
+
+@endsection
+
+@section('footers')
 
 @endsection
