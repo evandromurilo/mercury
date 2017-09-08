@@ -28,11 +28,9 @@ class StaticPagesController extends Controller
 	}
 
 	public function post_validate(AuthenticationForm $request){
-		$data = new 
 		$data = $request->all();
 
 		dd($data);
-
 	}
 
 	public function form2_validate(AuthenticationForm2 $request){
@@ -49,6 +47,4 @@ class StaticPagesController extends Controller
 	public function propaganda(){
 	  return view('pages.index')->with('ads', \App\Advertising::all());
 	}
-
-
 }
