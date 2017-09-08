@@ -4,7 +4,7 @@
 
 @section('content')
 	<h1>Criar anúncio</h1>
-	<form method="post" action="{{ route('ad.store') }}">
+	<form method="post" action="{{ route('ads.store') }}">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		Título:
 		@if ($errors->has('title'))

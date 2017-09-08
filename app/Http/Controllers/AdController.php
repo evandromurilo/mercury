@@ -31,6 +31,6 @@ class AdController extends Controller
 
 		$ad->save();
 
-		return redirect()->route('ad.index');
+		return redirect()->route('ads.index');
 	}
 }
