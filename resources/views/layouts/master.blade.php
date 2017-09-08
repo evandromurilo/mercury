@@ -52,6 +52,14 @@
 				<li class="nav-item">
 					<a class="nav-link disabled" href="#">Não tem ainda</a>
 				</li>
+
+
+				<li class="nav navbar-nav navbar-right">
+					<a class="nav-link" href="login">Logar <i class="fa fa-user" aria-hidden="true"></i></a>
+				</li>
+				<li class="nav navbar-nav navbar-right">
+					<a class="nav-link"  href="register">Cria Conta <i class="fa fa-user-plus" aria-hidden="true"></i></a>
+				</li>
 			</ul>
 
 		</div>
