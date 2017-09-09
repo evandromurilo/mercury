@@ -6,7 +6,7 @@
 
 	<form method="post" action="{{ route('ads.store') }}">
 		<fieldset class="col-md-6 form card">
-		  <legend id="legenda-form card-header">Criar Anúcio</legend><br>
+		  <legend id="legenda-form card-header">Criar Anúncio</legend><br>
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 		<div class="form-group">

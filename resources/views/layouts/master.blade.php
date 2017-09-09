@@ -16,6 +16,8 @@
 		<link href="{{ asset('css/style_ad_create.css') }}" rel="stylesheet">
 
 
+
+
 		<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -57,8 +59,8 @@
 					      </li>
 					    </ul>
 					    <span class="navbar-text">
-					      <a href="{{ route('login') }}">Login <i class="fa fa-user-o" aria-hidden="true"></i> </a>
-								<a href="{{ route('register') }}">Cria Conta <i class="fa fa-sign-in" aria-hidden="true"></i> </a>
+					      <a href="{{ route('login') }}"> Login<i class="fa fa-user-o" aria-hidden="true"></i> </a>
+								<a href="{{ route('register') }}"> Criar Conta<i class="fa fa-sign-in" aria-hidden="true"></i> </a>
 					    </span>
 					  </div>
 </nav>
@@ -84,7 +86,7 @@
 
 			  </div>
 		  <div class="card-footer text-muted">
-		    2 days ago
+		    © COPYRIGHT 2017 MERCURY LTDA, TODOS OS DIREITOS RESERVADOS
 		  </div>
 </div>
 
