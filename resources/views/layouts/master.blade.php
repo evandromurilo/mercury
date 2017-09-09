@@ -16,6 +16,8 @@
 		<link href="{{ asset('css/style_ad_create.css') }}" rel="stylesheet">
 
 
+
+
 		<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -39,35 +41,54 @@
 	</head>
 	<body>
 		<div class="menu" @yield('menu')>
-			<ul class="nav justify-content-center">
-				<li class="nav-item">
-					<a class="nav-link active" href="{{ route('home') }}">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{ route('contact') }}">Contato</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{ route('about') }}">Sobre</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Não tem ainda</a>
-				</li>
-
-
-				<li class="nav navbar-nav navbar-right">
-					<a class="nav-link" href="login">Logar <i class="fa fa-user" aria-hidden="true"></i></a>
-				</li>
-				<li class="nav navbar-nav navbar-right">
-					<a class="nav-link"  href="register">Cria Conta <i class="fa fa-user-plus" aria-hidden="true"></i></a>
-				</li>
-			</ul>
-
-		</div>
+<div class="card">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+					  <div class="collapse navbar-collapse" id="navbarText">
+					    <ul class="navbar-nav mr-auto">
+					      <li class="nav-item">
+					        <a class="nav-link" href="{{ route('home') }}">Home </a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="{{ route('contact') }}">Contato</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="{{ route('about') }}">Sobre</a>
+					      </li>
+					    </ul>
+					    <span class="navbar-text">
+					      <a href="{{ route('login') }}"> Login<i class="fa fa-user-o" aria-hidden="true"></i> </a>
+								<a href="{{ route('register') }}"> Criar Conta<i class="fa fa-sign-in" aria-hidden="true"></i> </a>
+					    </span>
+					  </div>
+</nav>
+</div>
 		<div class="content">
 			@yield('content')
 		</div>
-		<footer>
+		<footer class="navbar-default navbar-fixed-bottom fixarRodape">
 			@include('partials/links')
+
+			<div class="card text-center container-fluid">
+			  <div class="card-header">
+			    Featured
+			  </div>
+			  <div class="card-body">
+			    <h4 class="card-title">Special title treatment</h4>
+			    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+			    <a href="#"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:30px; color:black;"></i></a>
+			    <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size:30px; color:black;" ></i></i></a>
+			    <a href="#"><i class="fa fa-google-plus-official" aria-hidden="true" style="font-size:30px; color:black;"></i></a>
+			    <a href="#"><i class="fa fa-github-alt" aria-hidden="true" style="font-size:30px; color:black;"></i></a>
+			    <a href="#"><i class="fa fa-skype" aria-hidden="true" style="font-size:30px; color:black;"></i></a>
+
+			  </div>
+		  <div class="card-footer text-muted">
+		    © COPYRIGHT 2017 MERCURY LTDA, TODOS OS DIREITOS RESERVADOS
+		  </div>
+</div>
 
 		</footer>
 	</body>
