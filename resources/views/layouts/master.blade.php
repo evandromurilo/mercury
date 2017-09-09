@@ -39,30 +39,30 @@
 	</head>
 	<body>
 		<div class="menu" @yield('menu')>
-			<ul class="nav justify-content-center">
-				<li class="nav-item">
-					<a class="nav-link active" href="{{ route('home') }}">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{ route('contact') }}">Contato</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{{ route('about') }}">Sobre</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Não tem ainda</a>
-				</li>
 
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+					  <div class="collapse navbar-collapse" id="navbarText">
+					    <ul class="navbar-nav mr-auto">
+					      <li class="nav-item">
+					        <a class="nav-link" href="{{ route('home') }}">Home </a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="{{ route('contact') }}">Contato</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="{{ route('about') }}">Sobre</a>
+					      </li>
+					    </ul>
+					    <span class="navbar-text">
+					      <a href="{{ route('login') }}">Login <i class="fa fa-user-o" aria-hidden="true"></i> </a>
+								<a href="{{ route('register') }}">Cria Conta <i class="fa fa-sign-in" aria-hidden="true"></i> </a>
+					    </span>
+					  </div>
+</nav>
 
-				<li class="nav navbar-nav navbar-right">
-					<a class="nav-link" href="login">Logar <i class="fa fa-user" aria-hidden="true"></i></a>
-				</li>
-				<li class="nav navbar-nav navbar-right">
-					<a class="nav-link"  href="register">Cria Conta <i class="fa fa-user-plus" aria-hidden="true"></i></a>
-				</li>
-			</ul>
-
-		</div>
 		<div class="content">
 			@yield('content')
 		</div>
