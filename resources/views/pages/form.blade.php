@@ -9,8 +9,8 @@
 
 
 <form method="post" action="/post_validate" >
-<fieldset class="col-md-6 form">
-  <legend id="legenda-form">Detalhe da Propaganda</legend><br>
+<fieldset class="col-md-6 form card">
+  <legend id="legenda-form card-header">Detalhe da Propaganda</legend><br>
   <div class="form-group align-items-center">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
   </div>

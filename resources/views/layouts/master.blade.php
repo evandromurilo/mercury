@@ -39,7 +39,7 @@
 	</head>
 	<body>
 		<div class="menu" @yield('menu')>
-
+<div class="card">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -62,12 +62,31 @@
 					    </span>
 					  </div>
 </nav>
-
+</div>
 		<div class="content">
 			@yield('content')
 		</div>
-		<footer>
+		<footer class="navbar-default navbar-fixed-bottom fixarRodape">
 			@include('partials/links')
+
+			<div class="card text-center container-fluid">
+			  <div class="card-header">
+			    Featured
+			  </div>
+			  <div class="card-body">
+			    <h4 class="card-title">Special title treatment</h4>
+			    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+			    <a href="#"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:30px; color:black;"></i></a>
+			    <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size:30px; color:black;" ></i></i></a>
+			    <a href="#"><i class="fa fa-google-plus-official" aria-hidden="true" style="font-size:30px; color:black;"></i></a>
+			    <a href="#"><i class="fa fa-github-alt" aria-hidden="true" style="font-size:30px; color:black;"></i></a>
+			    <a href="#"><i class="fa fa-skype" aria-hidden="true" style="font-size:30px; color:black;"></i></a>
+
+			  </div>
+		  <div class="card-footer text-muted">
+		    2 days ago
+		  </div>
+</div>
 
 		</footer>
 	</body>

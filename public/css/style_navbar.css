@@ -30,4 +30,17 @@ li a:hover {
     float: none;
     display: inline-block;
   }
+}*/
+html, body{
+  margin: 0;
+  padding: 0;
+}
+.fixarRodape {
+        bottom: 0;
+        left: 0;
+        position: relative;
+        width: 100%;
+}
+.fa{
+  margin: 10px;
 }
