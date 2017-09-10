@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="https://use.fontawesome.com/2487cfdf7c.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -28,7 +30,9 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/') }}"><!--<i class="fa fa-handshake-o" aria-hidden="true"
+                      style="font-size:30px;"
+                    ></i>-->
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
@@ -37,6 +41,15 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;
+                        <li class="nav-item">
+        					        <a class="nav-link" href="{{ route('home') }}">Home </a>
+        					      </li>
+        					      <li class="nav-item">
+        					        <a class="nav-link" href="{{ route('contact') }}">Contato</a>
+        					      </li>
+        					      <li class="nav-item">
+        					        <a class="nav-link" href="{{ route('about') }}">Sobre</a>
+        					      </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -76,5 +89,27 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom">
+			@include('partials/links')
+
+			<div class="card text-center container-fluid">
+
+			  <div class="card-body">
+			    <h4 class="card-title">Special title treatment</h4>
+			    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+			    <a href="#"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:30px; color:black;"></i></a>
+			    <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size:30px; color:black;" ></i></i></a>
+			    <a href="#"><i class="fa fa-google-plus-official" aria-hidden="true" style="font-size:30px; color:black;"></i></a>
+			    <a href="#"><i class="fa fa-github-alt" aria-hidden="true" style="font-size:30px; color:black;"></i></a>
+			    <a href="#"><i class="fa fa-skype" aria-hidden="true" style="font-size:30px; color:black;"></i></a>
+
+			  </div>
+		  <div class="card-footer text-muted">
+		    © COPYRIGHT 2017 MERCURY LTDA, TODOS OS DIREITOS RESERVADOS
+		  </div>
+</div>
+
+		</footer>
 </body>
 </html>
