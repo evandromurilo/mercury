@@ -54,13 +54,18 @@
 					      <li class="nav-item">
 					        <a class="nav-link" href="{{ route('contact') }}">Contato</a>
 					      </li>
-					      <li class="nav-item">
+						  <li class="nav-item">
 					        <a class="nav-link" href="{{ route('about') }}">Sobre</a>
 					      </li>
 					    </ul>
 					    <span class="navbar-text">
-					      <a href="{{ route('login') }}"> Login<i class="fa fa-user-o" aria-hidden="true"></i> </a>
+							@if (Auth::guest())
+								<a href="{{ route('login') }}"> Login<i class="fa fa-user-o" aria-hidden="true"></i> </a>
 								<a href="{{ route('register') }}"> Criar Conta<i class="fa fa-sign-in" aria-hidden="true"></i> </a>
+							@else
+								<a href="#">Perfil<i class="fa fa-user-o" aria-hidden="true"></i> </a>
+								<a href="#">Logout<i aria-hidden="true"></i> </a>
+							@endif
 					    </span>
 					  </div>
 </nav>
