@@ -20,6 +20,5 @@ Route::post('post_validate', 'StaticPagesController@post_validate')->name('form'
 
 Auth::routes();
 
-//Route::get('/login', 'UserController@index')->name('login');
-
 Route::resource('ads', 'AdController');
+Route::resource('users', 'UserController');
