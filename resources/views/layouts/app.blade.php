@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<!--<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +7,14 @@
     <script src="https://use.fontawesome.com/2487cfdf7c.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- CSRF Token -->
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Styles -->
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -21,7 +22,7 @@
             <div class="container">
                 <div class="navbar-header">
 
-                    <!-- Collapsed Hamburger -->
+
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
@@ -29,16 +30,16 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}"><!--<i class="fa fa-handshake-o" aria-hidden="true"
+
+                    <a class="navbar-brand" href="{{ url('/') }}"><<i class="fa fa-handshake-o" aria-hidden="true"
                       style="font-size:30px;"
-                    ></i>-->
+                    ></i>
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
+
                     <ul class="nav navbar-nav">
                         &nbsp;
                         <li class="nav-item">
@@ -52,9 +53,9 @@
         					      </li>
                     </ul>
 
-                    <!-- Right Side Of Navbar -->
+
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
+
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Criar Conta</a></li>
@@ -87,7 +88,7 @@
         @yield('content')
     </div>
 
-    <!-- Scripts -->
+    
     <script src="{{ asset('js/app.js') }}"></script>
 
     <footer class="navbar navbar-default navbar-fixed-bottom">
