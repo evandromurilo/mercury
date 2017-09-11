@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'StaticPagesController@home')->name('home');
+Route::get('/', 'StaticPagesController@home');
+Route::get('/home', 'StaticPagesController@home')->name('home');
 Route::get('contact', 'StaticPagesController@contact')->name('contact');
 Route::get('about', 'StaticPagesController@about')->name('about');
 Route::get('form', 'StaticPagesController@form')->name('form');
@@ -19,6 +20,6 @@ Route::post('post_validate', 'StaticPagesController@post_validate')->name('form'
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/login', 'UserController@index')->name('login');
 
 Route::resource('ads', 'AdController');
