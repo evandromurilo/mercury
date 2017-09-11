@@ -11,8 +11,13 @@
   <div class="cotainer view_ads card">
     <div class="row ">
       <div class="col-xs-6">
-        <img id="size_img" src="https://i.pinimg.com/236x/18/63/cc/1863cc2425ad5f71b6b6bfddd64bb586--garfield.jpg"
-        class="rounded float-lenf img-thumbnail" alt="{{ $ad->full_name }}">
+		  @if (Storage::exists('public/ads/' . $ad->id))
+			  <img id="size_img" src="{{ asset(Storage::url('public/ads/' . $ad->id)) }}"
+        class="rounded float-left img-thumbnail" alt="{{ $ad->full_name }}">
+		  @else
+			<img id="size_img" src="https://i.pinimg.com/236x/18/63/cc/1863cc2425ad5f71b6b6bfddd64bb586--garfield.jpg"
+        class="rounded float-left img-thumbnail" alt="{{ $ad->full_name }}">
+		@endif
       </div>
       <div class="col-xs-6 space-img">
         <h3 class="font-weight-normal">{{ $ad->title }}</h3>

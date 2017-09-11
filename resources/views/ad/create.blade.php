@@ -4,7 +4,7 @@
 
 @section('content')
 
-	<form method="post" action="{{ route('ads.store') }}">
+	<form method="post" action="{{ route('ads.store') }}" enctype="multipart/form-data">
 		<fieldset class="col-md-6 form card">
 		  <legend id="legenda-form card-header">Criar Anúncio</legend><br>
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -32,6 +32,10 @@
 		@if ($errors->has('title'))
 		  <div class="alert alert-danger size_alert">{{ $errors->first('contact') }}</div>
 		@endif
+
+		<div class="form-group">
+			<input type="file" name="image"></input>
+		</div>
 
 			<input type="submit" name="submit" class="btn btn-primary">
 		</fieldset>
