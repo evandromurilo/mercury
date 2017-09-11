@@ -7,7 +7,7 @@
 	@if (Storage::exists('public/users/' . $user->id))
 		<img id="avatar" src="{{ asset(Storage::url('public/users/' . $user->id)) }}">
 	@else
-		<img id="avatar" src="https://i.pinimg.com/236x/18/63/cc/1863cc2425ad5f71b6b6bfddd64bb586--garfield.jpg">
+		<img id="avatar" src="{{ $user->gravatar }}?s=120">
 	@endif
 
 	@if (Auth::check() && Auth::id() == $user->id)
