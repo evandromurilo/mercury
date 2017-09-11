@@ -98,7 +98,7 @@
 		<!-- Scripts -->
 		<script src="{{ asset('js/app.js') }}"></script>
 
-		<footer class="navbar navbar-default navbar-fixed-bottom">
+		<footer class="navbar navbar-default">
 			@include('partials/links')
 
 			<div class="card text-center container-fluid">
