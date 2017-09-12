@@ -5,11 +5,17 @@
 
 @section('content')
 
+  <div class="container">
+      <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <div class="panel panel-default">
+                  <div class="panel-heading">Detalhes da Propaganda</div>
+                    <div class="panel-body">
 
 <form method="post" action="/post_validate" >
 
 
-  <legend id="legenda-form card-header">Detalhe da Propaganda</legend><br>
+
   <div class="form-group align-items-center">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
   </div>
@@ -84,7 +90,13 @@
     <button type="submit" class="btn btn-primary">Salvar</button>
       </div>
 
-</form>
+        </form>
+        <div>
+      <div>
+    <div>
+  <div>
+<div>
+<div>
 
 
 @endsection
