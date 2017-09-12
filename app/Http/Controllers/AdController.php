@@ -31,7 +31,10 @@ class AdController extends Controller
 
 		$ad->save();
 
-		$request->file('image')->storeAs('public/ads', $ad->id);
+		echo 'wtf';
+		if ($request->hasFile('image') && $request->file('image')->isValid()) {
+			$request->file('image')->storeAs('public/ads', $ad->id);
+		}
 
 		return redirect()->route('ads.index');
 	}
