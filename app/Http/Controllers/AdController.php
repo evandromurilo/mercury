@@ -10,7 +10,7 @@ use App\Ad;
 class AdController extends Controller
 {
 	public function index() {
-		return view('ad.index')->with('ads', \App\Ad::all());
+		return view('ad.index')->with('ads', \App\Ad::all()->reverse());
 	}
 
 	public function create() {
