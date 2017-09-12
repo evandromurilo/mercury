@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use App\Http\Requests\Request;
 use App\Http\Requests\AuthenticationForm;
 
-class AuthenticationForm extends FormRequest
+class AuthenticationUser extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -29,7 +29,7 @@ class AuthenticationForm extends FormRequest
           return [
             'full_name' => ['required', 'min:8'],
             'description' => ['required', 'min:4'],
-            'age' => ['required', 'min:1', 'max:2'],
+            'age' => ['required', 'min:1', 'max:150'],
             'address' => ['required', 'min:10'],
             'email' => ['required', 'email', 'min:7'],
             'phone' => ['required', 'min:8', 'max:11'],
