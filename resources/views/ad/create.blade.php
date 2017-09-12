@@ -46,7 +46,7 @@
 			</label>
 		</div>
 
-			<input type="submit" name="submit" class="btn btn-primary">
+			<input type="submit" name="submit" value="Enviar Dados" class="btn btn-primary">
 
 										</form>
 									</div>
