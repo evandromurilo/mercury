@@ -18,7 +18,7 @@
 
 		<div class="form-group">
 			<label class="exemploInputTitulo">TíTulo do Anúcio</label>
-			<input type="text" name="title" class="form-control" value="{{ old('title') }}"placeholder="Ex: MJ Montador..."/>
+			<input type="text" name="title" class="form-control" value="{{ old('title') }}" autocomplete="off" placeholder="Ex: MJ Montador..."/>
 		</div>
 					@if ($errors->has('title'))
 					  <div class="alert alert-danger size_alert">{{ $errors->first('title') }}</div>
@@ -26,7 +26,7 @@
 
 		<div class="form-group">
 			<label class="exemploInputDescription">Descrição sobre Anúncio</label>
-			<input type="text" name="description" class="form-control" value="{{ old('description') }}" placeholder="Ex: Tenho Certificação em Algumas áreas... "/>
+			<input type="text" name="description" class="form-control" value="{{ old('description') }}" autocomplete="off" placeholder="Ex: Tenho Certificação em Algumas áreas... "/>
 		</div>
 					@if ($errors->has('title'))
 					  <div class="alert alert-danger size_alert">{{ $errors->first('description') }}</div>
@@ -34,14 +34,16 @@
 
 		<div class="form-group">
 			<label class="exemploInputContact">Contato</label>
-			<input type="text" name="contact" class="form-control" value="{{ old('contact') }}" id="field"/>
+			<input type="text" name="contact" class="form-control" value="{{ old('contact') }}" id="field" autocomplete="off"/>
 		</div>
 					@if ($errors->has('title'))
 					  <div class="alert alert-danger size_alert">{{ $errors->first('contact') }}</div>
 					@endif
 
 		<div class="form-group">
-			<input type="file" name="image"></input>
+			<label class="btn btn-primary btn-file">
+    Selecione uma Imagem <input type="file" name="image" style="display: none;">
+			</label>
 		</div>
 
 			<input type="submit" name="submit" class="btn btn-primary">

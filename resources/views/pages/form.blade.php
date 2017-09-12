@@ -2,14 +2,13 @@
 
 @section('title','Formulário')
 
-@section('menu')
 
-@endsection
 @section('content')
 
 
 <form method="post" action="/post_validate" >
-<fieldset class="col-md-6 form card">
+
+
   <legend id="legenda-form card-header">Detalhe da Propaganda</legend><br>
   <div class="form-group align-items-center">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -38,35 +37,6 @@
     @if ($errors->has('age'))
       <div class="alert alert-danger size_alert">{{ $errors->first('age') }}</div>
     @endif
-
-
-
-        <div class="row">
-            <div class='col-sm-offset-4 col-sm-4'>
-              <div class="form-group">
-                <label for="exampleInputNascimento">Data de Nascimento</label>
-                  <div class='input-group date'>
-                      <input type='text' class="form-control datepicker"  id='calendario' name="birthday" value="{{ old('birthday') }}"  />
-                      <span class="input-group-addon">
-                          <span class="fa fa-calendar"></span>
-                      </span>
-                  </div>
-              </div>
-            </div>
-        </div>
-      <script>
-            $(function() {
-                $("#calendario").datepicker({
-                  dateFormat: 'dd-mm-yy',
-                  locale: 'pt-br'
-              });
-            });
-      </script>
-      <script>
-                $(function() {
-                    $( "#calendario" ).datepicker();
-                });
-      </script>
 
         <div class="form-group">
           <label for="exampleInputSexo">Sexo</label><br>
@@ -113,7 +83,7 @@
 
     <button type="submit" class="btn btn-primary">Salvar</button>
       </div>
-    </fieldset>
+
 </form>
 
 
