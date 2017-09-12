@@ -15,6 +15,6 @@ class UserController extends Controller
 	}
 
 	public function edit(Request $request) {
-		echo 'Não implementado.';
+		return view('user.edit');
 	}
 }
