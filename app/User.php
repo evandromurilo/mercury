@@ -33,4 +33,9 @@ class User extends Authenticatable
 
 		return "http://www.gravatar.com/avatar/$hash";
 	}
+
+	public function getAdsAttribute()
+	{
+		return Ad::where('user_id', $this->id)->get()->reverse();
+	}
 }
