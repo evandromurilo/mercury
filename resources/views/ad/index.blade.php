@@ -23,11 +23,11 @@
         <h3 class="font-weight-normal">{{ $ad->title }}</h3>
 
           <p class="d-incline-block text-trucate font-weight-normal" style="max-width: 500px;"> {{ $ad->description }} </p>
-          <p class="font-weight-normal">nome</p>
-          <p class="font-weight-normal"><a href="#">Informação sobre serviço</a></p>
+					<p class="font-weight-normal">Anunciante:
+						<a class="font-weight-normal" href="{{ route('users.show', $ad->creator->id) }}">{{ $ad->creator->name }}
+					</p>
+					<p class="font-weight-normal"><a href="{{ route('ads.show', $ad->id) }}">Informação sobre serviço</a></p>
           <p>Telefone: {{ $ad->contact }}</p>
-          <p class="font-weight-normal"><a href="#">visita o perfil</a></p>
-
       </div>
     </div>
   </div>
