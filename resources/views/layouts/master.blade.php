@@ -53,10 +53,13 @@
 													<a class="nav-link" href="{{ route('home') }}">Home </a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" href="{{ route('contact') }}">Contato</a>
+													<a class="nav-link" href="{{ route('ads.index') }}">Anúncios</a>
 												</li>
 												<li class="nav-item">
 													<a class="nav-link" href="{{ route('about') }}">Sobre</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="{{ route('contact') }}">Contato</a>
 												</li>
 										</ul>
 
@@ -73,6 +76,7 @@
 																</a>
 
 																<ul class="dropdown-menu" role="menu">
+																		<li><a href="{{ route('ads.create') }}">Novo Anúncio</a></li>
 																		<li><a href="{{ route('users.show', Auth::user()->id) }}">Perfil</a></li>
 																		<li>
 																				<a href="{{ route('logout') }}"
