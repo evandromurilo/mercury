@@ -11,7 +11,8 @@
               <div class="panel panel-default">
                   <div class="panel-heading">Detalhes da Propaganda</div>
                     <div class="panel-body">
-                      <form method="post" action="/post_validate" >
+                      <form method="post" action="{{ route('users.update', Auth::id()) }}" >
+			 {{ method_field('PATCH') }}
   <div class="form-group align-items-center">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
   </div>
