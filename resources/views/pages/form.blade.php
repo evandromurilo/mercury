@@ -11,11 +11,7 @@
               <div class="panel panel-default">
                   <div class="panel-heading">Detalhes da Propaganda</div>
                     <div class="panel-body">
-
-<form method="post" action="/post_validate" >
-
-
-
+                      <form method="post" action="/post_validate" >
   <div class="form-group align-items-center">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
   </div>
