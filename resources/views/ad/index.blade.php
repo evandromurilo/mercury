@@ -15,10 +15,10 @@
             <div class="panel-heading">Filtro de Pesquisa</div>
             <div class="list-group">
                 <a href="#" class="list-group-item active"> Todos</a>
-                <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                <a href="#" class="list-group-item">Morbi leo risus</a>
-                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                <a href="#" class="list-group-item">Vestibulum at eros</a>
+                <a href="#" class="list-group-item">Mais Recentes</a>
+                <a href="#" class="list-group-item">Mais Antigos</a>
+                <a href="#" class="list-group-item">falta ideia</a>
+                <a href="#" class="list-group-item">falta ideia</a>
             </div>
           </div>
           </div>
@@ -44,11 +44,11 @@
             <h4 class="">{{ $ad->title }}</h4>
 
               <p class="d-incline-block text-trucate font-weight-normal ss"> {{ $ad->description }} </p>
-    					<p class="font-weight-normal">Anunciante:
-    						<a class="font-weight-normal" href="{{ route('users.show', $ad->creator->id) }}">{{ $ad->creator->name }}
+    					<p class="font-weight-normal ss">Anunciante:
+    						<a class="font-weight-normal ss" href="{{ route('users.show', $ad->creator->id) }}">{{ $ad->creator->name }}
     					</p>
-    					<p class="font-weight-normal"><a href="{{ route('ads.show', $ad->id) }}">Informação sobre serviço</a></p>
-              <p>Telefone: {{ $ad->contact }}</p>
+    					<p class="font-weight-normal ss"><a href="{{ route('ads.show', $ad->id) }}">Informação sobre serviço</a></p>
+              <p class="ss">Telefone: {{ $ad->contact }}</p>
 
         </div>
       </div>
