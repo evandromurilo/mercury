@@ -16,7 +16,7 @@
 
 		<link href="{{ asset('css/style_form.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/style_navbar.css') }}" rel="stylesheet">
-		<link href="{{ asset('css/style_page_advertisement.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/style_ad_index.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/style_ad_create.css') }}" rel="stylesheet">
 
 
@@ -103,7 +103,7 @@
 		<!-- Scripts -->
 		<script src="{{ asset('js/app.js') }}"></script>
 
-		<footer class="navbar  navbar-fixed-bottom">
+		<footer class="navbar  navbar-default fixarRodape">
 			@include('partials/links')
 
 			<div class="card text-center container-fluid">

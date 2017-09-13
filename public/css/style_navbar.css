@@ -37,9 +37,7 @@ html, body{
 }
 .fixarRodape {
         bottom: 0;
-        left: 0;
-        position: relative;
-        width: 100%;
+        left: 0;       
 }
 .fa{
   margin: 10px;

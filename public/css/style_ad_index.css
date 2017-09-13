@@ -9,14 +9,16 @@ body{
   font-size: 25px;
 }
 
-.cotainer{
-  width: 700px;
+.con{
+  width: 500px;
   margin: 0 auto;
   margin-bottom: 10px;
   margin-top: 30px;
-  display: flex;
+  /*display: flex;*/
 }
-
+.position{
+  width: 500px;
+}
 h3{
   line-height: 35px;
   text-align: center;
@@ -36,4 +38,8 @@ p{
 .space-img{
   margin-left: 16px;
 
+}
+hr{
+  background-color: #d3e0e9;
+  height: 1px;
 }
