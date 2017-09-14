@@ -24,10 +24,10 @@ class AdController extends Controller
 		}
 		else {
 			if ($request->o == "asc") {
-				return view('ad.index')->with('ads', \App\Ad::all());
+				return view('ad.index')->with('ads', Ad::all());
 			}
 			else {
-				return view('ad.index')->with('ads', \App\Ad::all()->reverse());
+				return view('ad.index')->with('ads', Ad::all()->reverse());
 			}
 		}
 	}
@@ -53,6 +53,47 @@ class AdController extends Controller
 
 		if ($request->hasFile('image') && $request->file('image')->isValid()) {
 			$request->file('image')->storeAs('public/ads', $ad->id);
+		}
+
+		return redirect()->route('ads.index');
+	}
+
+	public function edit(Request $request) {
+		$id = $request->segment(2);
+		if (Auth::id() == Ad::find($id)->user_id) {
+			return view('ad.edit')->with('ad', Ad::find($id));
+		}
+		else {
+			return redirect()->route('ads.edit', Auth::id());
+		}
+	}
+
+	public function update(AuthenticationAd $request) {
+		$ad = Ad::find($request->segment(2));
+
+		$ad->title = $request->title;
+		$ad->description = $request->description;
+		$ad->contact = $request->contact;
+		$ad->price = floor(floatval($request->price) * 100);
+
+		$ad->save();
+
+		if ($request->hasFile('image') && $request->file('image')->isValid()) {
+			$request->file('image')->storeAs('public/ads', $ad->id);
+		}
+
+		return redirect()->route('ads.show', $ad->id);
+	}
+
+	public function show(Request $request) {
+		return view('ad.show')->with('ad', Ad::find($request->segment(2)));
+	}
+
+	public function destroy(Request $request) {
+		$id = $request->segment(2);
+
+		if (Ad::find($id)->user_id == Auth::id()) {
+			Ad::destroy($id);
 		}
 
 		return redirect()->route('ads.index');
