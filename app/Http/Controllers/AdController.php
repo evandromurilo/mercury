@@ -64,7 +64,7 @@ class AdController extends Controller
 			return view('ad.edit')->with('ad', Ad::find($id));
 		}
 		else {
-			return redirect()->route('ads.edit', Auth::id());
+			return redirect()->route('ads.show', $id);
 		}
 	}
 
