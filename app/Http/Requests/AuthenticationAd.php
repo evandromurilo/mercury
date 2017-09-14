@@ -30,8 +30,10 @@ class AuthenticationAd extends FormRequest
             'title' => ['required', 'min:8', 'max:30'],
             'description' => ['required', 'min:10'],
             'contact' => ['required'],
+            'price' => ['required'],
         ];
         [
+            'price.required' => 'O Campo preço é necessário por favor!',
             'title.required' => 'O Campo Título é necessário por favor!',
             'title.min' => 'O Campo Título Possuir mais de 8 caracteres!',
             'title.max' => 'O Campo Título Possuir menos de 20 caracteres!',

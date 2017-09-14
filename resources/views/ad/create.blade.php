@@ -28,15 +28,23 @@
 			<label class="exemploInputDescription">Descrição sobre Anúncio</label>
 			<input type="text" name="description" class="form-control" value="{{ old('description') }}" autocomplete="off" placeholder="Ex: Tenho Certificação em Algumas áreas... "/>
 		</div>
-					@if ($errors->has('title'))
+					@if ($errors->has('description'))
 					  <div class="alert alert-danger size_alert">{{ $errors->first('description') }}</div>
+					@endif
+
+		<div class="form-group">
+			<label class="exemploInputContact">Preço</label>
+			<input type="text" name="price" class="form-control" value="{{ old('price') }}" id="field" autocomplete="off"/>
+		</div>
+					@if ($errors->has('price'))
+					  <div class="alert alert-danger size_alert">{{ $errors->first('price') }}</div>
 					@endif
 
 		<div class="form-group">
 			<label class="exemploInputContact">Contato</label>
 			<input type="text" name="contact" class="form-control" value="{{ old('contact') }}" id="field" autocomplete="off"/>
 		</div>
-					@if ($errors->has('title'))
+					@if ($errors->has('contact'))
 					  <div class="alert alert-danger size_alert">{{ $errors->first('contact') }}</div>
 					@endif
 
