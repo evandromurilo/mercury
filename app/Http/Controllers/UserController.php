@@ -15,7 +15,14 @@ class UserController extends Controller
 	}
 
 	public function edit(Request $request) {
-		return view('user.edit');
+		$user = User::find($request->segment(2));
+
+		if (Auth::id() == $user->id) {
+			return view('user.edit');
+		}
+		else {
+			return redirect()->route('users.edit', Auth::id());
+		}
 	}
 
 	public function update(\App\Http\Requests\AuthenticationUser $request) {
