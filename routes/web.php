@@ -22,3 +22,4 @@ Auth::routes();
 
 Route::resource('ads', 'AdController');
 Route::resource('users', 'UserController');
+Route::resource('messages', 'MessageController');
