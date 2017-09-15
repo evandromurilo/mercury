@@ -32,8 +32,34 @@ class MessageController extends Controller
 	}
 
 	public function index() {
-		$messages = Message::where('to_id', Auth::id())->get();
+		if (Auth::guest()) {
+			return redirect()->route('login');
+		}
+		else {
+			$messages = Message::where('to_id', Auth::id())->get();
 
-		return view('message.index')->with('msgs', $messages);
+			return view('message.index')->with('msgs', $messages);
+		}
+	}
+
+	public function show(Request $request) {
+		$message = Message::find($request->segment(2));
+
+		if (Auth::id() == $message->to_id) {
+			return view('message.show')->with('msg', $message);
+		}
+		else {
+			return redirect()->route('messages.index');
+		}
+	}
+
+	public function destroy(Request $request) {
+		$id = $request->segment(2);
+
+		if (Message::find($id)->to_id == Auth::id()) {
+			Message::destroy($id);
+		}
+
+		return redirect()->route('messages.index');
 	}
 }
