@@ -78,6 +78,7 @@
 																<ul class="dropdown-menu" role="menu">
 																		<li><a href="{{ route('ads.create') }}">Novo Anúncio</a></li>
 																		<li><a href="{{ route('users.show', Auth::user()->id) }}">Perfil</a></li>
+																		<li><a href="{{ route('messages.index') }}">Mensagens</a></li>
 																		<li>
 																				<a href="{{ route('logout') }}"
 																						onclick="event.preventDefault();
