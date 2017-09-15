@@ -14,12 +14,10 @@ width: 50%;
 #datetimepicker1{
   width: 250px;
 }
-#exampleInputfone{
+#exampleInputfone, #exampleInputCelular{
   width: 200px;
 }
-#exampleInputCelular{
-  width: 200px;
-}
+
 
 .size_alert{
   height: 20px;

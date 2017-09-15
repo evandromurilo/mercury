@@ -9,8 +9,8 @@
 
 		<script src="https://use.fontawesome.com/2487cfdf7c.js"></script>
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
 
 		  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -18,9 +18,10 @@
 		<link href="{{ asset('css/style_navbar.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/style_ad_index.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/style_ad_create.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
 
-		<script src="https://use.fontawesome.com/2487cfdf7c.js"></script>
+		<!--<script src="https://use.fontawesome.com/2487cfdf7c.js"></script>-->
 
 	</head>
 	<body>
