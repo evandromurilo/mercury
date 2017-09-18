@@ -34,7 +34,7 @@
 
 														<div class="form-group">
 																<label class="exemploInputContact">Preço</label>
-																<input type="text" name="price" class="form-control" value="{{ old('price') }}" id="field" autocomplete="off"/>
+																<input type="text" name="price" class="form-control" value="{{ old('price') }}" id="field" placeholder="Ex: 12.05" autocomplete="off"/>
 														</div>
 														@if ($errors->has('price'))
 																<div class="alert alert-danger size_alert">{{ $errors->first('price') }}</div>
