@@ -21,6 +21,7 @@
 		<a href={{ route('users.show', $ad->user_id) }}>
 			{{ $ad->creator->name }}
 		</a>
+		(<a href={{ route('messages.create', ['ad' => $ad->id]) }}>Enviar Mensagem</a>)
 	</p>
 
 	@if ($ad->user_id == Auth::id())

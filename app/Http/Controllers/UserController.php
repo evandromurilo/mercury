@@ -36,6 +36,12 @@ class UserController extends Controller
 		$user->cell_phone = $request->cell_phone;
 		$user->email = $request->email;
 
+		if ($request->gender == "mulher") {
+			$user->gender = 0;
+		} else {
+			$user->gender = 1;
+		}
+
 		$user->save();
 
 		return redirect()->route('users.show', $user->id);
