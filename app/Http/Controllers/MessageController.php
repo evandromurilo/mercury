@@ -10,15 +10,15 @@ use App\User;
 
 class MessageController extends Controller
 {
+	public function __construct() {
+		$this->middleware('auth');
+	}
+
 	public function create(Request $request) {
-		if (Auth::check()) {
-			if ($request->has('ad')) {
-				return view('message.create')->with('ad', Ad::find($request->ad));
-			} else {
-				return view('message.create');
-			}
+		if ($request->has('ad')) {
+			return view('message.create')->with('ad', Ad::find($request->ad));
 		} else {
-			return redirect()->route('home');
+			return view('message.create');
 		}
 	}
 
@@ -37,14 +37,9 @@ class MessageController extends Controller
 	}
 
 	public function index() {
-		if (Auth::guest()) {
-			return redirect()->route('login');
-		}
-		else {
-			$messages = Message::where('to_id', Auth::id())->get();
+		$messages = Message::where('to_id', Auth::id())->get();
 
-			return view('message.index')->with('msgs', $messages);
-		}
+		return view('message.index')->with('msgs', $messages);
 	}
 
 	public function show(Request $request) {

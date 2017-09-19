@@ -8,6 +8,10 @@ use App\User;
 
 class UserController extends Controller
 {
+	public function __construct() {
+		$this->middleware('auth')->only(['edit', 'update']);
+	}
+
 	public function show(Request $request) {
 		$user = User::find($request->segment(2));
 

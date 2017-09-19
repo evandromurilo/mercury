@@ -10,6 +10,10 @@ use App\Ad;
 
 class AdController extends Controller
 {
+	public function __construct() {
+		$this->middleware('auth')->except(['show', 'index']);
+	}
+
 	public function index(Request $request) {
 		if ($request->f == "free") {
 			return view('ad.index')->with(['ads' => Ad::where('price', 0)->get(), 'filter' => 'free']);
@@ -33,11 +37,7 @@ class AdController extends Controller
 	}
 
 	public function create() {
-		if (Auth::check()) {
-			return view('ad.create');
-		} else {
-			return redirect()->route('home');
-		}
+		return view('ad.create');
 	}
 
 	public function store(AuthenticationAd $request) {
