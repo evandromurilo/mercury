@@ -18,6 +18,7 @@
 		<link href="{{ asset('css/style_navbar.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/style_ad_index.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/style_ad_create.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/style_user_show.css') }}" rel="stylesheet">
 
 
 		<script src="https://use.fontawesome.com/2487cfdf7c.js"></script>

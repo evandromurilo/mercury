@@ -1,0 +1,16 @@
+body{
+  margin: 0;
+}
+
+
+.well {
+  width: 300px;
+}
+#rows-ul{
+ text-decoration: none;
+ list-style: none;
+}
+
+#rows-li{
+  padding-bottom: 10px;
+}
