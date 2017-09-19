@@ -2,15 +2,29 @@ body{
   margin: 0;
 }
 
+#avatar{
+  margin: 10px 0px 10px 10px;
+  width: 150px;
+  height: 150px;
+}
+ .alterar-a{
+   text-decoration: none;
+ }
+ .gravata-avatar:hover{
+
+ }
+
 
 .well {
   width: 300px;
+  margin-left: 10px;
 }
 #rows-ul{
- text-decoration: none;
  list-style: none;
 }
 
 #rows-li{
   padding-bottom: 10px;
+  text-decoration: none;
+
 }
