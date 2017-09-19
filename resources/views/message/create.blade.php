@@ -12,8 +12,6 @@
 										<div class="panel-body">
 
 												<form method="post" action="{{ route('messages.store') }}">
-
-
 														<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 														<div class="form-group">
@@ -29,8 +27,8 @@
 														@endif
 
 														<div class="form-group">
-																<label class="exemploInputDescription">Corpo da Mensagem</label>
-																<input type="text" name="body" class="form-control" value="{{ old('body') }}" autocomplete="off" placeholder="Ex: Tenho Certificação em Algumas áreas... "/>
+																<label class="exemploInputDescription">Texto da Mensagem</label>
+																<input type="text" name="body" class="form-control" value="{{ old('body') }}" autocomplete="off" placeholder="Ex: Podemos Negociar... "/>
 														</div>
 														@if ($errors->has('body'))
 																<div class="alert alert-danger size_alert">{{ $errors->first('body') }}</div>

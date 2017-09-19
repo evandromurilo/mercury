@@ -14,10 +14,15 @@
 		<a href={{ route('users.edit', Auth::id()) }}>Editar</a>
 	@endif
 
+<div class="well">
+	<div class="row">
 	<h2>Anúncios</h2>
-	<ul>
+	<ul id="rows-ul">
 	@foreach ($user->ads as $ad)
-			<li><a href="{{ route('ads.show', $ad->id) }}">{{ $ad->title }}</a></li>
+			<li id="rows-li"><a href="{{ route('ads.show', $ad->id) }}">{{ $ad->title }}</a></li>
 	@endforeach
 	</ul>
+
+</div>
+</div>
 @endsection
