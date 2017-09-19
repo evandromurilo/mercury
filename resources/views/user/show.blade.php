@@ -18,6 +18,7 @@
 	@if (Auth::check())
 		<a href="{{ route('messages.create', ['user' => $user->id]) }}">Enviar Mensagem</a>
 	@endif
+
 	<div class="well">
 		<div class="row">
 			<h2>Anúncios</h2>
@@ -33,4 +34,5 @@
 
 		</div>
 	</div>
+
 @endsection
