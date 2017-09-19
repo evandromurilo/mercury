@@ -10,6 +10,7 @@
 	</a>
 	<p> {{ $msg->body }} </p>
 
+	<a href="{{ route('messages.create', ['msg' => $msg->id]) }}">Responder</a>
 	<form id="form" action="{{ route('messages.destroy', $msg->id) }}" method="POST">
 			{{ method_field('DELETE') }}
 			{{ csrf_field() }}

@@ -15,11 +15,25 @@ class MessageController extends Controller
 	}
 
 	public function create(Request $request) {
+		$title = '';
+		$to_email = '';
+
 		if ($request->has('ad')) {
-			return view('message.create')->with('ad', Ad::find($request->ad));
-		} else {
-			return view('message.create');
+			$ad = Ad::find($request->ad);
+			$title = $ad->title;
+			$to_email = $ad->creator->email;
+		} else if ($request->has('msg')) {
+			$msg = Message::find($request->msg);
+
+			if ($msg->to_id == Auth::id()) {
+				$title = $msg->title;
+				$to_email = $msg->author->email;
+			}
+		} else if ($request->has('user')) {
+			$to_email = User::find($request->user)->email;
 		}
+
+		return view('message.create')->with(['title' => $title, 'to_email' => $to_email]);
 	}
 
 	public function store(Request $request) {
