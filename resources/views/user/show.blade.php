@@ -19,7 +19,11 @@
 	<h2>Anúncios</h2>
 	<ul id="rows-ul">
 	@foreach ($user->ads as $ad)
+		@if ($ad->price == 0) 
+			Free! <li id="rows-li"><a href="{{ route('ads.show', $ad->id) }}">{{ $ad->title }}</a></li>
+		@else
 			<li id="rows-li"><a href="{{ route('ads.show', $ad->id) }}">{{ $ad->title }}</a></li>
+		@endif
 	@endforeach
 	</ul>
 
