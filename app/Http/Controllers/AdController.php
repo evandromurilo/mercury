@@ -12,22 +12,22 @@ class AdController extends Controller
 {
 	public function index(Request $request) {
 		if ($request->f == "free") {
-			return view('ad.index')->with('ads', Ad::where('price', 0)->get());
+			return view('ad.index')->with(['ads' => Ad::where('price', 0)->get(), 'filter' => 'free']);
 		}
 		else if ($request->f == "m") {
 			if ($request->o == "asc") {
-				return view('ad.index')->with('ads', Ad::orderBy('price', 'asc')->get());
+				return view('ad.index')->with(['ads' => Ad::orderBy('price', 'asc')->get(), 'filter' => 'cheap']);
 			}
 			else {
-				return view('ad.index')->with('ads', Ad::orderBy('price', 'desc')->get());
+				return view('ad.index')->with(['ads' => Ad::orderBy('price', 'desc')->get(), 'filter' => 'expensive']);
 			}
 		}
 		else {
 			if ($request->o == "asc") {
-				return view('ad.index')->with('ads', Ad::all());
+				return view('ad.index')->with(['ads' => Ad::all(), 'filter' => 'old']);
 			}
 			else {
-				return view('ad.index')->with('ads', Ad::all()->reverse());
+				return view('ad.index')->with(['ads' => Ad::all()->reverse(), 'filter' => 'new']);
 			}
 		}
 	}
