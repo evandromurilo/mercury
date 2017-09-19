@@ -8,7 +8,7 @@
 				<div class="row">
 						<div class="col-md-8 col-md-offset-2">
 								<div class="panel panel-default">
-										<div class="panel-heading">Criar Anúncio</div>
+										<div class="panel-heading">Criar Mensagem</div>
 										<div class="panel-body">
 
 												<form method="post" action="{{ route('messages.store') }}">
@@ -18,7 +18,11 @@
 
 														<div class="form-group">
 																<label class="exemploInputTitulo">TíTulo da Mensagem</label>
+																@if (!empty($ad))
+																	<input type="text" name="title" class="form-control" value="{{ 'RE: ' . $ad->title }}" autocomplete="off" placeholder="Ex: MJ Montador..."/>
+															@else
 																<input type="text" name="title" class="form-control" value="{{ old('title') }}" autocomplete="off" placeholder="Ex: MJ Montador..."/>
+															@endif
 														</div>
 														@if ($errors->has('title'))
 																<div class="alert alert-danger size_alert">{{ $errors->first('title') }}</div>
@@ -34,7 +38,11 @@
 
 														<div class="form-group">
 																<label class="exemploInputContact">Email do remetente:</label>
-																<input type="text" name="to_email" class="form-control" value="{{ old('to_email') }}" id="field" autocomplete="off"/>
+																@if (!empty($ad))
+																	<input type="text" name="to_email" class="form-control" value="{{ $ad->creator->email }}" id="field" autocomplete="off"/>
+																@else
+																	<input type="text" name="to_email" class="form-control" value="{{ old('to_email') }}" id="field" autocomplete="off"/>
+																@endif
 														</div>
 														@if ($errors->has('to_email'))
 																<div class="alert alert-danger size_alert">{{ $errors->first('to_email') }}</div>

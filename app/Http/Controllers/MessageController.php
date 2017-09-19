@@ -4,14 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Ad;
 use App\Message;
 use App\User;
 
 class MessageController extends Controller
 {
-	public function create() {
+	public function create(Request $request) {
 		if (Auth::check()) {
-			return view('message.create');
+			if ($request->has('ad')) {
+				return view('message.create')->with('ad', Ad::find($request->ad));
+			} else {
+				return view('message.create');
+			}
 		} else {
 			return redirect()->route('home');
 		}
