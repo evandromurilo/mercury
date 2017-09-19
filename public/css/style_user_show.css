@@ -3,16 +3,14 @@ body{
 }
 
 #avatar{
-  margin: 10px 0px 10px 10px;
+
   width: 150px;
   height: 150px;
 }
  .alterar-a{
    text-decoration: none;
  }
- .gravata-avatar:hover{
 
- }
 
 
 .well {
@@ -26,5 +24,28 @@ body{
 #rows-li{
   padding-bottom: 10px;
   text-decoration: none;
+
+}
+
+@media screen and (max-width: 400px)  {
+h1{
+font-size: 25px;
+text-align: center;
+}
+.gravata-avatar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.well{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.alterar-a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 }
