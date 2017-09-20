@@ -64,11 +64,13 @@
               <p class="ss">Contato: {{ $ad->contact }}</p>
 
         </div>
+
       </div>
     <hr>
     </div>
 
 @endforeach
+{{ $ads->appends(request()->query())->links() }}
 
 
 @endsection

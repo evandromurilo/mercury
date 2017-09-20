@@ -15,23 +15,30 @@ class AdController extends Controller
 	}
 
 	public function index(Request $request) {
+		$ads_page = 8;
+
 		if ($request->f == "free") {
-			return view('ad.index')->with(['ads' => Ad::where('price', 0)->get(), 'filter' => 'free']);
+			$ads = Ad::where('price', 0)->simplePaginate($ads_page);
+			return view('ad.index')->with(['ads' => $ads, 'filter' => 'free']);
 		}
 		else if ($request->f == "m") {
 			if ($request->o == "asc") {
-				return view('ad.index')->with(['ads' => Ad::orderBy('price', 'asc')->get(), 'filter' => 'cheap']);
+				$ads = Ad::orderBy('price', 'asc')->simplePaginate($ads_page);
+				return view('ad.index')->with(['ads' => $ads, 'filter' => 'cheap']);
 			}
 			else {
-				return view('ad.index')->with(['ads' => Ad::orderBy('price', 'desc')->get(), 'filter' => 'expensive']);
+				$ads = Ad::orderBy('price', 'desc')->simplePaginate($ads_page);
+				return view('ad.index')->with(['ads' => $ads, 'filter' => 'expensive']);
 			}
 		}
 		else {
 			if ($request->o == "asc") {
-				return view('ad.index')->with(['ads' => Ad::all(), 'filter' => 'old']);
+				$ads = Ad::simplePaginate($ads_page);
+				return view('ad.index')->with(['ads' => Ad::simplePaginate($ads_page), 'filter' => 'old']);
 			}
 			else {
-				return view('ad.index')->with(['ads' => Ad::all()->reverse(), 'filter' => 'new']);
+				$ads = Ad::orderBy('id', 'desc')->simplePaginate($ads_page);
+				return view('ad.index')->with(['ads' => $ads, 'filter' => 'new']);
 			}
 		}
 	}
