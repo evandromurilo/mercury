@@ -39,10 +39,10 @@
 														@if ($errors->has('price'))
 																<div class="alert alert-danger size_alert">{{ $errors->first('price') }}</div>
 														@endif
-											
+
 														<div class="form-group">
 																<label class="exemploInputContact">Contato</label>
-																<input type="text" name="contact" class="form-control" value="{{ old('contact') }}" id="field" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" autocomplete="off"/>
+																<input type="text" name="contact" class="form-control" value="{{ old('contact') }}" id="field"  autocomplete="off"/>
 														</div>
 														@if ($errors->has('contact'))
 																<div class="alert alert-danger size_alert">{{ $errors->first('contact') }}</div>

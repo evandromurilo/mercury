@@ -41,7 +41,8 @@
 							{{ csrf_field() }}
 							<a onclick="document.getElementById('form').submit();" href="#">Deletar</a>
 					</form>
-				</div>
-	</div>
+
 	@endif
+	</div>
+</div>
 @endsection
