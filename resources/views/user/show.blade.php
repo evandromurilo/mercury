@@ -3,6 +3,11 @@
 @section('title', 'Perfil')
 
 @section('content')
+
+
+<link href="{{ asset('css/style_user_show.css') }}" rel="stylesheet">
+
+
 	<h1> {{ $user->name }} </h1>
 		<div class="gravata-avatar">
 				@if (Storage::exists('public/users/' . $user->id))

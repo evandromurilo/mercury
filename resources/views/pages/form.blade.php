@@ -5,6 +5,8 @@
 
 @section('content')
 
+  <link href="{{ asset('css/style_form.css') }}" rel="stylesheet">
+
   <div class="container">
       <div class="row">
           <div class="col-md-8 col-md-offset-2">

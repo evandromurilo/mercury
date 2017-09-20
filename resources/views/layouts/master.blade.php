@@ -13,15 +13,8 @@
 		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
 
 		  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-		<link href="{{ asset('css/style_form.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/style_navbar.css') }}" rel="stylesheet">
-		<link href="{{ asset('css/style_ad_index.css') }}" rel="stylesheet">
-		<link href="{{ asset('css/style_ad_create.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-   	<link href="{{ asset('css/style_user_show.css') }}" rel="stylesheet">
-		
-
 
 		<!--<script src="https://use.fontawesome.com/2487cfdf7c.js"></script>-->
 

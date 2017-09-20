@@ -4,6 +4,8 @@
 
 @section('content')
 
+  <link href="{{ asset('css/style_ad_index.css') }}" rel="stylesheet">
+
   <div id="topo">
       <p> falta implementar</p>
     </div>
