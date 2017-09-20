@@ -6,13 +6,13 @@
 	<h1>{{ $ad->title }}</h1>
 
 		<div class="img-pro">
-			<img style="width:160px; height:160px;" src="{{ $ad->imgUrl }}">
+			<img src="{{ $ad->imgUrl }}">
 		</div>
 
 <div class="well">
 	<div class="row">
 			<h3>Descrição</h3>
-			<p>{{ $ad->description }}</p>
+			<p style="text-align: justify;">{{ $ad->description }}</p>
 
 			@if ($ad->price == 0)
 					<p>Preço: <i class="fa fa-gift" aria-hidden="true" style="color:green;"></i></p>
@@ -25,8 +25,9 @@
 			<p>Criado por:
 				<a href={{ route('users.show', $ad->user_id) }}>
 					{{ $ad->creator->name }}
-				</a>
-				(<a href={{ route('messages.create', ['ad' => $ad->id]) }}>Enviar Mensagem</a>)
+				</a></p>
+				<p>
+				<a href={{ route('messages.create', ['ad' => $ad->id]) }}>Enviar Mensagem<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
 			</p>
 
 			@if ($ad->user_id == Auth::id())

@@ -2,6 +2,10 @@ body{
   margin: 0;
   padding: 0;
 }
+img{
+  width: 160px;
+  height: 160px;
+}
 
 /**SmartPhone**/
 @media screen and (max-width: 420px){
@@ -12,8 +16,8 @@ body{
   h3{
     text-align: center;
   }
+
   .img-pro{
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,5 +25,21 @@ body{
   }
   .well{
     float: left;
+  }
+}
+/**tablet**/
+@media screen and (max-width: 770px) and (min-width: 421px){
+  h1{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  h3{
+    text-align: center;
+  }
+  .img-pro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
   }
 }
