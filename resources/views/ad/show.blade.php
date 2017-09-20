@@ -3,6 +3,10 @@
 @section('title', $ad->title)
 
 @section('content')
+
+	<link href="{!! asset('css/style_ad_show.css') !!}" rel="stylesheet">
+
+
 	<h1>{{ $ad->title }}</h1>
 
 		<div class="img-pro">

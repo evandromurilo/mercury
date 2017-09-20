@@ -7,12 +7,12 @@ img{
   height: 160px;
 }
 
-/**SmartPhone**//*
+/**SmartPhone**/
 @media screen and (max-width: 420px){
   h1{
     text-align: center;
     margin-bottom: 20px;
-
+   
   }
   h3{
     text-align: center;
@@ -28,7 +28,7 @@ img{
     float: left;
   }
 }
-/**tablet**//*
+/**tablet**/
 @media screen and (max-width: 770px) and (min-width: 421px){
   h1{
     text-align: center;
