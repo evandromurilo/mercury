@@ -13,7 +13,7 @@ body{
 
 .well {
   width: 300px;
-  margin-left: 10px;
+
 }
 #rows-ul{
  list-style: none;
@@ -34,10 +34,11 @@ text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 20px;
 }
 .well{
 display: flex;
-width: 96%;
+width: 100%;
 align-items: center;
 justify-content: center;
 }
@@ -48,21 +49,23 @@ justify-content: center;
 }
 }
 
-@media screen and (max-width: 680px) and (min-width: 421px){
+@media screen and (max-width: 770px) and (min-width: 421px){
 h1{
   font-size: 30px;
   text-align: center;
+  padding-bottom: 20px;
 }
+
 .gravata-avatar{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 20px;
 }
 .well{
 display: flex;
-width: 96%;
-
 align-items: center;
 justify-content: center;
+width: 100%;
 }
 }
