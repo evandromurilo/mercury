@@ -20,6 +20,7 @@
 		<link href="{{ asset('css/style_ad_create.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
    	<link href="{{ asset('css/style_user_show.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/style_ad_show.css') }}" rel="stylesheet">
 
 
 		<!--<script src="https://use.fontawesome.com/2487cfdf7c.js"></script>-->
