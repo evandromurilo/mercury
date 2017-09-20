@@ -24,7 +24,7 @@ body{
   text-decoration: none;
 
 }
-
+/**SmartPhone**/
 @media screen and (max-width: 420px)  {
 h1{
 font-size: 25px;
@@ -49,6 +49,7 @@ justify-content: center;
 }
 }
 
+/**tablet**/
 @media screen and (max-width: 770px) and (min-width: 421px){
 h1{
   font-size: 30px;
@@ -68,4 +69,10 @@ align-items: center;
 justify-content: center;
 width: 100%;
 }
+}
+/**desktop**/
+@media screen and (min-width: 771px){
+  h1{
+    color: red;
+  }
 }
