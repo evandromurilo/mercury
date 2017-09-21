@@ -20,9 +20,7 @@
 		<a class="alterar-a" href="{{ route('users.edit', Auth::id()) }}">Editar Perfil</a>
 	@endif
 
-	@if (Auth::check())
-		<a href="{{ route('messages.create', ['user' => $user->id]) }}">Enviar Mensagem</a>
-	@endif
+
 
 	<div class="well">
 		<div class="row">
@@ -36,7 +34,9 @@
 						@endif
 					@endforeach
 			</ul>
-
+			@if (Auth::check())
+				<a class="btn_messages" href="{{ route('messages.create', ['user' => $user->id]) }}">Enviar Mensagem<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+			@endif
 		</div>
 	</div>
 
