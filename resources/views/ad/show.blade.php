@@ -35,11 +35,11 @@
 			</p>
 
 			@if ($ad->user_id == Auth::id())
-					<a href="{{ route('ads.edit', $ad->id) }}">Editar</a>
+					<a href="{{ route('ads.edit', $ad->id) }}">Editar Anúnio<i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
 					<form id="form" action="{{ route('ads.destroy', $ad->id) }}" method="POST">
 							{{ method_field('DELETE') }}
 							{{ csrf_field() }}
-							<a onclick="document.getElementById('form').submit();" href="#">Deletar</a>
+							<a onclick="document.getElementById('form').submit();" href="#">Deletar Anúcio<i class="fa fa-trash-o" aria-hidden="true"></i></a>
 					</form>
 
 	@endif
