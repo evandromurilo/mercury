@@ -8,6 +8,10 @@
 	<a href="{{ route('messages.create') }}">Nova mensagem</a><br>
 
 	@foreach ($msgs as $msg)
-		<a href="{{ route('messages.show', $msg->id) }}">{{ $msg->title }}</a><br>
+		@if (!$msg->seen)
+			<a style="color:red;" href="{{ route('messages.show', $msg->id) }}">{{ $msg->title }}</a><br>
+		@else
+			<a href="{{ route('messages.show', $msg->id) }}">{{ $msg->title }}</a><br>
+		@endif
 	@endforeach
 @endsection

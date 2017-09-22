@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Ad;
 use App\Message;
 use App\User;
+use App\Notifications\NewMessage;
 
 class MessageController extends Controller
 {
@@ -45,6 +46,7 @@ class MessageController extends Controller
 		$message->from_id = Auth::id();
 
 		$message->save();
+		User::find($message->to_id)->notify(new NewMessage($message));
 
 		//return redirect()->route('messages.show', $message->id);
 		return redirect()->route('home');
@@ -52,6 +54,7 @@ class MessageController extends Controller
 
 	public function index() {
 		$messages = Message::where('to_id', Auth::id())->get();
+		Auth::user()->unreadNotifications()->update(['read_at' => \Carbon\Carbon::now()]);
 
 		return view('message.index')->with('msgs', $messages);
 	}
@@ -60,6 +63,11 @@ class MessageController extends Controller
 		$message = Message::find($request->segment(2));
 
 		if (Auth::id() == $message->to_id) {
+			if (!$message->seen) {
+				$message->seen = true;
+				$message->save();
+			}
+
 			return view('message.show')->with('msg', $message);
 		}
 		else {
