@@ -10,7 +10,7 @@
       <p> falta implementar</p>
     </div>
 
-    <div class="btn-group-vertical" role="group" aria-label="...">
+    <div class="btn-group-vertical filtro-pesquisa" role="group" aria-label="...">
       <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-4">
@@ -29,7 +29,7 @@
           </div>
           </div>
         </div>
-    </div>
+
 
 
 @foreach($ads as $ad)
@@ -72,6 +72,7 @@
     </div>
 
 @endforeach
+
 {{ $ads->appends(request()->query())->links() }}
 
 

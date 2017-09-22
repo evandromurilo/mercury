@@ -36,7 +36,7 @@ a{
   }
 }
 /**tablet**/
-@media screen and (max-width: 770px) and (min-width: 421px){
+@media screen and (max-width: 768px) and (min-width: 421px){
   h1{
     text-align: center;
     margin-bottom: 20px;
@@ -51,7 +51,11 @@ a{
     margin-bottom: 20px;
   }
 }
-
-@media screen and (min-width: 771px) {
+/** erro muito erro**/
+@media screen and (max-width: 928px) and (min-width: 770px){
+h1{
+  text-align:center;
+  background-color:aqua;
+}
 
 }
