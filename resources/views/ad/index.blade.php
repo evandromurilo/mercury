@@ -6,6 +6,28 @@
 
   <link href="{{ asset('css/style_ad_index.css') }}" rel="stylesheet">
 
+  <!--
+      <div class="btn-group-vertical filtro-pesquisa" role="group" aria-label="...">
+        <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="panel-heading">Filtro de Pesquisa</div>
+              <div class="list-group">
+  								<a href="{{ route('ads.index', ['o' => 'desc']) }}"
+  									class="list-group-item {{ $filter == 'new' ? 'active' : '' }}">Mais Recentes</a>
+                  <a href="{{ route('ads.index', ['o' => 'asc']) }}"
+  									class="list-group-item {{ $filter == 'old' ? 'active' : '' }}">Mais Antigos</a>
+  								<a href="{{ route('ads.index', ['f' => 'm', 'o' => 'asc']) }}"
+  									class="list-group-item {{ $filter == 'cheap' ? 'active' : '' }}">Mais Baratos</a>
+  								<a href="{{ route('ads.index', ['f' => 'm', 'o' => 'desc']) }}"
+  									class="list-group-item {{ $filter == 'expensive' ? 'active' : '' }}">Mais Caros</a>
+              </div>
+            </div>
+            </div>
+            </div>
+          </div>
+  -->
+
 
 
 @foreach($ads as $ad)
@@ -29,11 +51,13 @@
 
                           <p class="text-justify" > {{ $ad->description }} </p>
                 					<p>Anunciante:
-            								<a  href="{{ route('users.show', $ad->creator->id) }}">{{ $ad->creator->name }}</a>
+            								<a  href="{{ route('users.show', $ad->creator->id) }}">{{ $ad->creator->name }}
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            </a>
                 					</p>
 
             							@if ($ad->price == 0)
-            									<p style="color: green;">Free</p>
+            									<p style="color: green;">Free<i class="fa fa-gift" aria-hidden="true" style="color:green;"></i></p>
             							@else
             									<p>Preço: {{ $ad->priceF }}</p>
             							@endif
