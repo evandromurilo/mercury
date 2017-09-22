@@ -6,23 +6,20 @@
 
   <link href="{{ asset('css/style_ad_index.css') }}" rel="stylesheet">
 
-  <div id="topo">
-      <p> falta implementar</p>
-    </div>
-
 
 
 @foreach($ads as $ad)
 
-    <div class="row ">
-      <div class="col-ms-6 col-md-4">
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
         <div class="thumbnail">
 
 				<a href="{{ route('ads.show', $ad->id) }}">
       		  @if (Storage::exists('public/ads/' . $ad->id))
-      			  <img id="size_img" src="{{ asset(Storage::url('public/ads/' . $ad->id)) }}" alt="{{ $ad->full_name }}">
+      			  <img  src="{{ asset(Storage::url('public/ads/' . $ad->id)) }}" alt="{{ $ad->full_name }}">
       		  @else
-      			<img id="size_img" src="https://i.pinimg.com/236x/18/63/cc/1863cc2425ad5f71b6b6bfddd64bb586--garfield.jpg" alt="{{ $ad->full_name }}">
+      			<img  src="https://i.pinimg.com/236x/18/63/cc/1863cc2425ad5f71b6b6bfddd64bb586--garfield.jpg" alt="{{ $ad->full_name }}">
       		@endif
 				</a>
                   <div class="caption">
@@ -30,7 +27,7 @@
             							<a href="{{ route('ads.show', $ad->id) }}">{{ $ad->title }}</a>
             						</h4>
 
-                          <p> {{ $ad->description }} </p>
+                          <p class="text-justify" > {{ $ad->description }} </p>
                 					<p>Anunciante:
             								<a  href="{{ route('users.show', $ad->creator->id) }}">{{ $ad->creator->name }}</a>
                 					</p>
@@ -46,6 +43,8 @@
           </div>
         </div>
       </div>
+    </div>
+
 
 
 @endforeach
