@@ -4,6 +4,7 @@
 
 @section('content')
 
+
 <link href="{{ asset('css/style_user_show.css') }}" rel="stylesheet">
 
 <header>
@@ -30,9 +31,9 @@
 					<ul id="rows-ul">
 							@foreach ($user->ads as $ad)
 								@if ($ad->price == 0)
-									<adview title="{{ $ad->title }}" id="{{ $ad->id }}" description="{{ $ad->description }}" priceF="{{ $ad->priceF }}" free="true" url="{{ route('ads.show', $ad->id) }}"></adview>
+									<li onmouseover="Mover();" onmouseout="Tirar();" id="rows-li"><i class="fa fa-gift" aria-hidden="true" style="color:green;"></i><a href="{{ route('ads.show', $ad->id) }}">{{ $ad->title }}</a></li>
 								@else
-									<adview title="{{ $ad->title }}" id="{{ $ad->id }}" description="{{ $ad->description }}" priceF="{{ $ad->priceF }}" url="{{ route('ads.show', $ad->id) }}"></adview>
+									<li id="rows-li"><i class="fa fa-usd" aria-hidden="true" style="color:#FFD700"></i><a href="{{ route('ads.show', $ad->id) }}">{{ $ad->title }}</a></li>
 								@endif
 							@endforeach
 					</ul>
@@ -49,7 +50,6 @@
 			</div>
 		</div>
 	</div>
-
 </article>
 <!-- mano fiz aqui mais vai precisar de um lop mais acho que a ideia e essa-->
 <script type="text/javascript">
