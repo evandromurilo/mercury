@@ -20,7 +20,7 @@
 
     <div class="form-group">
       <label for="exampleInputNome">Nome Completo</label>
-      <input type="text" name="full_name" class="form-control" value="{{ old('full_name') }}" id="exampleInputNome" aria-describedby="nomelHelp" placeholder="Ex. José ...">
+      <input type="text" name="full_name" class="form-control" value="{{ old('full_name') }}" request autofocus id="exampleInputNome" aria-describedby="nomelHelp" placeholder="Ex. José ...">
     </div>
     @if ($errors->has('full_name'))
       <div class="alert alert-danger size_alert">{{ $errors->first('full_name') }}</div>

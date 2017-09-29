@@ -7,7 +7,7 @@
 
 <link href="{{ asset('css/style_user_show.css') }}" rel="stylesheet">
 
-
+<header>
 	<h1> {{ $user->name }} </h1>
 		<div class="gravata-avatar">
 				@if (Storage::exists('public/users/' . $user->id))
@@ -19,9 +19,9 @@
 	@if (Auth::check() && Auth::id() == $user->id)
 		<a class="alterar-a" href="{{ route('users.edit', Auth::id()) }}">Editar Perfil</a>
 	@endif
+</header>
 
-
-
+<article>
 	<div class="well">
 		<div class="row">
 			<h2>Anúncios</h2>
@@ -39,5 +39,7 @@
 			@endif
 		</div>
 	</div>
+</article>
+
 
 @endsection

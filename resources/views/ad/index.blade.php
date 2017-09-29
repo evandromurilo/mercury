@@ -32,11 +32,10 @@
 
 @foreach($ads as $ad)
 
-<div class="container">
+<div class="container tt">
     <div class="row">
       <div class="col-md-4">
         <div class="thumbnail">
-
 				<a href="{{ route('ads.show', $ad->id) }}">
       		  @if (Storage::exists('public/ads/' . $ad->id))
       			  <img  src="{{ asset(Storage::url('public/ads/' . $ad->id)) }}" alt="{{ $ad->full_name }}">
@@ -44,6 +43,7 @@
       			<img  src="https://i.pinimg.com/236x/18/63/cc/1863cc2425ad5f71b6b6bfddd64bb586--garfield.jpg" alt="{{ $ad->full_name }}">
       		@endif
 				</a>
+
                   <div class="caption">
                         <h4>
             							<a href="{{ route('ads.show', $ad->id) }}">{{ $ad->title }}</a>
@@ -64,10 +64,15 @@
 
                           <p>Contato: {{ $ad->contact }}</p>
                       </div>
-          </div>
-        </div>
+
+
+
+
       </div>
-    </div>
+      </div>
+      </div>
+      </div>
+
 
 
 

@@ -7,6 +7,8 @@ img{
   width: 150px;
   height: 150px;
 }
+.tt{
+
 }
 /**SmaerPhone**/
 @media screen and (max-width: 420px){
@@ -30,7 +32,8 @@ a{
 }
 /**desktop**/
 @media screen and (min-width: 769px){
-  body{
-    background-color: red;
-  }
+
+
+
+
 }

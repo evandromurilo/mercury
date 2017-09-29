@@ -76,8 +76,7 @@
 																		<li><a href="{{ route('users.show', Auth::user()->id) }}">Perfil</a></li>
 																		@if (Auth::user()->unreadNotifications->isNotEmpty())
 																			<li><a href="{{ route('messages.index') }}">
-																					(<spam style="color:red;">{{ Auth::user()->unreadNotifications->count() }}</spam>)
-																					Mensagens
+																					<spam class="badge">{{ Auth::user()->unreadNotifications->count() }}</spam>																					Mensagens
 																			</a></li>
 																		@else
 																			<li><a href="{{ route('messages.index') }}">Mensagens</a></li>
