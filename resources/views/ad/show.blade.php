@@ -6,17 +6,22 @@
 
 	<link href="{!! asset('css/style_ad_show.css') !!}" rel="stylesheet">
 
-
+<div class="container">
+	<div class="row">
 	<h1>{{ $ad->title }}</h1>
+</div>
+</div>
 
+<div class="container">
+	<div class="row">
 		<div class="img-pro">
 			<img src="{{ $ad->imgUrl }}">
 		</div>
 
 <div class="well">
-	<div class="row">
-			<h3>Descrição</h3>
-			<p style="text-align: justify;">{{ $ad->description }}</p>
+	<div class="txt">
+			<h3>Descrição do Anúncio</h3>
+			<p>{{ $ad->description }}</p>
 
 			@if ($ad->price == 0)
 					<p>Preço: <i class="fa fa-gift" aria-hidden="true" style="color:green;"></i></p>
@@ -27,11 +32,11 @@
 			<p>Contato: {{ $ad->contact }}</p>
 
 			<p>Criado por:
-				<a href={{ route('users.show', $ad->user_id) }}>
-					{{ $ad->creator->name }}
+				<a class="style-color" href={{ route('users.show', $ad->user_id) }} >
+					{{ $ad->creator->name }} <i class="fa fa-user" aria-hidden="true"></i>
 				</a></p>
 				<p>
-				<a href={{ route('messages.create', ['ad' => $ad->id]) }}>Enviar Mensagem<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+				<a class="style-color" href={{ route('messages.create', ['ad' => $ad->id]) }}>Enviar Mensagem<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
 			</p>
 
 			@if ($ad->user_id == Auth::id())
@@ -43,6 +48,8 @@
 					</form>
 
 	@endif
+	</div>
+	</div>
 	</div>
 </div>
 @endsection

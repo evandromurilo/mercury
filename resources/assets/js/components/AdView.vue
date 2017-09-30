@@ -25,7 +25,7 @@ h3{
 }
 .ad-popover{
 	position: absolute;
-	width: 200px;
+	width: 400px;
 	background: #fff;
 	border: 1px solid #42b983;
 	padding: 10px 20px;
@@ -50,6 +50,7 @@ button{
 </style>
 
 <template>
+	<div class="b-container">
 	 <div class="inline">
 		 <li id="rows-li">
 			 <i v-show="free" class="fa fa-gift" aria-hidden="true" style="color:green;"></i>
@@ -61,14 +62,16 @@ button{
 											v-on:mouseout="hoverOutInfo">
 			 <h3>{{ this.title }}</h3>
 			 <p>{{ this.description }}</p>
+			 <p>{{ this.price }}</p>
 			 <a :href="this.url"><button>Ver detalhes</button></a>
 		 </div>
     </div>
+  </div>		
 </template>
 
 <script>
     export default {
-		props: ['id', 'title', 'description', 'free', 'priceF', 'url'],
+		props: ['id', 'title', 'description', 'free', 'price', 'url'],
         mounted() {
             console.log('Component mounted.')
         },
