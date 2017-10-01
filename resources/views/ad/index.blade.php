@@ -29,49 +29,43 @@
   -->
 
 
-
-@foreach($ads as $ad)
-
-<div class="container">
-    <div class="row">
-      <div class="col-md-4 col-xs-12 col-lg-6">
-        <div class="well">
-				<a href="{{ route('ads.show', $ad->id) }}">
-      		  @if (Storage::exists('public/ads/' . $ad->id))
-      			  <img  src="{{ asset(Storage::url('public/ads/' . $ad->id)) }}" alt="{{ $ad->full_name }}">
-      		  @else
-      			<img  src="https://i.pinimg.com/236x/18/63/cc/1863cc2425ad5f71b6b6bfddd64bb586--garfield.jpg" alt="{{ $ad->full_name }}">
-      		@endif
-				</a>
+	<div class="container">
+		<div class="row">
+			@foreach($ads as $ad)
+				<div class="col-md-4 col-xs-12 col-lg-6">
+					<div class="well">
+						<a href="{{ route('ads.show', $ad->id) }}">
+							@if (Storage::exists('public/ads/' . $ad->id))
+								<img  src="{{ asset(Storage::url('public/ads/' . $ad->id)) }}" alt="{{ $ad->full_name }}">
+							@else
+								<img  src="https://i.pinimg.com/236x/18/63/cc/1863cc2425ad5f71b6b6bfddd64bb586--garfield.jpg" alt="{{ $ad->full_name }}">
+							@endif
+						</a>
 
 
-                        <h4>
-            							<a href="{{ route('ads.show', $ad->id) }}">{{ $ad->title }}</a>
-            						</h4>
+						<h4>
+							<a href="{{ route('ads.show', $ad->id) }}">{{ $ad->title }}</a>
+						</h4>
 
-                          <p class="text-justify" > {{ $ad->description }} </p>
-                					<p>Anunciante:
-            								<a  href="{{ route('users.show', $ad->creator->id) }}">{{ $ad->creator->name }}
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            </a>
-                					</p>
+						<p class="text-justify" > {{ $ad->description }} </p>
+						<p>Anunciante:
+						<a  href="{{ route('users.show', $ad->creator->id) }}">{{ $ad->creator->name }}
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</a>
+						</p>
 
-            							@if ($ad->price == 0)
-            									<p style="color: green;">Free<i class="fa fa-gift" aria-hidden="true" style="color:green;"></i></p>
-            							@else
-            									<p>Preço: {{ $ad->priceF }}</p>
-            							@endif
+						@if ($ad->price == 0)
+							<p style="color: green;">Free<i class="fa fa-gift" aria-hidden="true" style="color:green;"></i></p>
+						@else
+							<p>Preço: {{ $ad->priceF }}</p>
+						@endif
 
-                          <p>Contato: {{ $ad->contact }}</p>
-                      </div>
-      </div>
-      </div>
-      </div>
-
-
-
-
-@endforeach
+						<p>Contato: {{ $ad->contact }}</p>
+					</div>
+				</div>
+			@endforeach
+		</div>
+	</div>
 
 {{ $ads->appends(request()->query())->links() }}
 
