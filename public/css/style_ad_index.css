@@ -1,15 +1,13 @@
 body{
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 img{
   width: 150px;
   height: 150px;
 }
-.tt{
 
-}
 /**SmaerPhone**/
 @media screen and (max-width: 420px){
 
@@ -19,10 +17,6 @@ h4{
 a{
   color:rgb(51,51,51);
 }
-.thumbnail{
-  border: 2px solid #636b6f;
-}
-
 }
 /**tablet**/
 @media screen and (max-width: 767px) and (min-width: 421px){
@@ -32,8 +26,5 @@ a{
 }
 /**desktop**/
 @media screen and (min-width: 769px){
-
-
-
-
+  
 }

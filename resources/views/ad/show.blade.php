@@ -39,6 +39,7 @@
 				<a class="style-color" href={{ route('messages.create', ['ad' => $ad->id]) }}>Enviar Mensagem<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
 			</p>
 
+<div>
 			@if ($ad->user_id == Auth::id())
 					<a href="{{ route('ads.edit', $ad->id) }}">Editar Anúnio<i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
 					<form id="form" action="{{ route('ads.destroy', $ad->id) }}" method="POST">
@@ -46,7 +47,7 @@
 							{{ csrf_field() }}
 							<a onclick="document.getElementById('form').submit();" href="#">Deletar Anúcio<i class="fa fa-trash-o" aria-hidden="true"></i></a>
 					</form>
-
+</div>
 	@endif
 	</div>
 	</div>

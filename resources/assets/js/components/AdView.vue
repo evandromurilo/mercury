@@ -23,6 +23,7 @@ h3{
 	display: inline-block;
 	position: relative;
 }
+/** posição da tela**/
 .ad-popover{
 	position: absolute;
 	width: 400px;
@@ -66,7 +67,7 @@ button{
 			 <a :href="this.url"><button>Ver detalhes</button></a>
 		 </div>
     </div>
-  </div>		
+  </div>
 </template>
 
 <script>
