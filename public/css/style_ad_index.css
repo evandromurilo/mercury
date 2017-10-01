@@ -26,5 +26,12 @@ a{
 }
 /**desktop**/
 @media screen and (min-width: 769px){
-  
+  .texto{
+    white-space: nowrap;
+    width: 200px;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
 }
