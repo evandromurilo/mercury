@@ -20,7 +20,7 @@
 
 														<div class="form-group">
 																<label class="exemploInputTitulo">TíTulo do Anúcio</label>
-																<input type="text" name="title" class="form-control" value="{{ old('title') }}" autocomplete="off" placeholder="Ex: MJ Montador..."/>
+																<input type="text" name="title" class="form-control" size=30 maxlength=30 value="{{ old('title') }}" autocomplete="off" placeholder="Ex: MJ Montador..."/>
 														</div>
 														@if ($errors->has('title'))
 																<div class="alert alert-danger size_alert">{{ $errors->first('title') }}</div>
@@ -28,7 +28,7 @@
 
 														<div class="form-group">
 																<label class="exemploInputDescription">Descrição sobre Anúncio</label>
-																<input type="text" name="description" class="form-control" value="{{ old('description') }}" autocomplete="off" placeholder="Ex: Tenho Certificação em Algumas áreas... "/>
+																<input type="text" name="description" class="form-control"  value="{{ old('description') }}" autocomplete="off" placeholder="Ex: Tenho Certificação em Algumas áreas... "/>
 														</div>
 														@if ($errors->has('description'))
 																<div class="alert alert-danger size_alert">{{ $errors->first('description') }}</div>

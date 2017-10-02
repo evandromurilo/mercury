@@ -30,12 +30,44 @@ p{
 .titulo-user-anuncio, .price, .phone{
   margin-bottom: 2px;
 }
+.rounded{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 }
 /**tablet**/
-@media screen and (max-width: 767px) and (min-width: 421px){
-  body{
-    background-color: blue;
-  }
+@media screen and (max-width: 768px) and (min-width: 421px){
+  .titulo-user-anuncio{
+    white-space: nowrap;
+      width: 310px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .texto{
+      white-space: nowrap;
+      width: 200px;
+      word-break: break-all;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    h4{
+      text-align: center;
+    }
+    p{
+      line-height: 1,5em;
+    }
+    .titulo-user-anuncio, .price, .phone{
+      margin-bottom: 2px;
+    }
+    .well{
+      height: 350px;
+    }
+    .rounded{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 }
 /**desktop**/
 @media screen and (min-width: 769px){
@@ -70,4 +102,19 @@ a:link{
 .user-anucio:hover{
   color: #111;
 }
+p{
+  line-height: 1,5em;
+}
+.titulo-user-anuncio, .price, .phone{
+  margin-bottom: 2px;
+}
+.well{
+  height: 350px;
+}
+.rounded{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 }

@@ -32,15 +32,17 @@
 	<div class="container">
 		<div class="row">
 			@foreach($ads as $ad)
-				<div class="col-md-4 .col-xs-12 .col-sm-4 .col-lg-4">
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 					<div class="well">
-						<a href="{{ route('ads.show', $ad->id) }}">
-							@if (Storage::exists('public/ads/' . $ad->id))
-								<img  class="rounded" src="{{ asset(Storage::url('public/ads/' . $ad->id)) }}" alt="{{ $ad->full_name }}">
-							@else
-								<img  src="https://i.pinimg.com/236x/18/63/cc/1863cc2425ad5f71b6b6bfddd64bb586--garfield.jpg" alt="{{ $ad->full_name }}">
-							@endif
-						</a>
+            <div class="rounded">
+  						<a href="{{ route('ads.show', $ad->id) }}">
+  							@if (Storage::exists('public/ads/' . $ad->id))
+  								<img  class="img-rounded" src="{{ asset(Storage::url('public/ads/' . $ad->id)) }}" alt="{{ $ad->full_name }}">
+  							@else
+  								<img class="img-rounded" src="https://i.pinimg.com/236x/18/63/cc/1863cc2425ad5f71b6b6bfddd64bb586--garfield.jpg" alt="{{ $ad->full_name }}">
+  							@endif
+  						</a>
+          </div>
 
             <!--Titulo do Anúcio-->
 						<h4>
@@ -48,13 +50,13 @@
 						</h4>
 
             <!--descrição do conteudo-->
-						<p class="text-justify texto">{{ $ad->description }}</p>
+						    <p class="text-justify texto">{{ $ad->description }}</p>
 
             <!--usuario do anuncio-->
 						<p class="titulo-user-anuncio">Anunciante:
-  						<a class="user-anucio"  href="{{ route('users.show', $ad->creator->id) }}">{{ $ad->creator->name }}
-  							<i class="fa fa-user" aria-hidden="true"></i>
-  						</a>
+  						 <a  class="user-anucio"  href="{{ route('users.show', $ad->creator->id) }}">{{ $ad->creator->name }}
+  							  <i class="fa fa-user" aria-hidden="true"></i>
+  						 </a>
 						</p>
             <!--valor da propaganda-->
 						@if ($ad->price == 0)
