@@ -34,20 +34,23 @@
 			<p>Criado por:
 				<a class="style-color" href={{ route('users.show', $ad->user_id) }} >
 					{{ $ad->creator->name }} <i class="fa fa-user" aria-hidden="true"></i>
-				</a></p>
-				<p>
-				<a class="style-color" href={{ route('messages.create', ['ad' => $ad->id]) }}>Enviar Mensagem<i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+				</a>
+			</p>
+			<p>
+					<a class="style-color" href={{ route('messages.create', ['ad' => $ad->id]) }}>Enviar Mensagem
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					</a>
 			</p>
 
-<div>
-			@if ($ad->user_id == Auth::id())
-					<a href="{{ route('ads.edit', $ad->id) }}">Editar Anúnio<i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-					<form id="form" action="{{ route('ads.destroy', $ad->id) }}" method="POST">
-							{{ method_field('DELETE') }}
-							{{ csrf_field() }}
-							<a onclick="document.getElementById('form').submit();" href="#">Deletar Anúcio<i class="fa fa-trash-o" aria-hidden="true"></i></a>
-					</form>
-</div>
+				<div>
+							@if ($ad->user_id == Auth::id())
+									<a href="{{ route('ads.edit', $ad->id) }}">Editar Anúnio<i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+									<form id="form" action="{{ route('ads.destroy', $ad->id) }}" method="POST">
+											{{ method_field('DELETE') }}
+											{{ csrf_field() }}
+											<a onclick="document.getElementById('form').submit();" href="#">Deletar Anúcio<i class="fa fa-trash-o" aria-hidden="true"></i></a>
+									</form>
+				</div>
 	@endif
 	</div>
 	</div>
