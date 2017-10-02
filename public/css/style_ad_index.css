@@ -8,6 +8,7 @@ img{
   height: 150px;
 }
 
+
 /**SmaerPhone**/
 @media screen and (max-width: 420px){
 
@@ -16,6 +17,18 @@ h4{
 }
 a{
   color:rgb(51,51,51);
+}
+.titulo-user-anuncio{
+  white-space: nowrap;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+p{
+  line-height: 1,5em;
+}
+.titulo-user-anuncio, .price, .phone{
+  margin-bottom: 2px;
 }
 }
 /**tablet**/
@@ -28,10 +41,33 @@ a{
 @media screen and (min-width: 769px){
   .texto{
     white-space: nowrap;
-    width: 200px;
+    width: 280px;
     word-break: break-all;
     overflow: hidden;
     text-overflow: ellipsis;
-
   }
+  .user-anucio{
+    white-space: nowrap;
+    width: 300px;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+h4{
+  text-align: center;
+}
+
+.titulo-anucio:hover{
+  color: #111;
+  border-bottom: 2px solid #111;
+}
+p, a{
+  color: #777;
+}
+a:link{
+  text-decoration: none;
+}
+.user-anucio:hover{
+  color: #111;
+}
 }

@@ -32,41 +32,38 @@
 	<div class="container">
 		<div class="row">
 			@foreach($ads as $ad)
-				<div class="col-md-4">
+				<div class="col-md-4 .col-xs-12 .col-sm-4 .col-lg-4">
 					<div class="well">
 						<a href="{{ route('ads.show', $ad->id) }}">
 							@if (Storage::exists('public/ads/' . $ad->id))
-								<img  class="img-rounded" src="{{ asset(Storage::url('public/ads/' . $ad->id)) }}" alt="{{ $ad->full_name }}">
+								<img  class="rounded" src="{{ asset(Storage::url('public/ads/' . $ad->id)) }}" alt="{{ $ad->full_name }}">
 							@else
-								<img class="img-rounded" src="https://i.pinimg.com/236x/18/63/cc/1863cc2425ad5f71b6b6bfddd64bb586--garfield.jpg" alt="{{ $ad->full_name }}">
+								<img  src="https://i.pinimg.com/236x/18/63/cc/1863cc2425ad5f71b6b6bfddd64bb586--garfield.jpg" alt="{{ $ad->full_name }}">
 							@endif
 						</a>
 
-
+            <!--Titulo do Anúcio-->
 						<h4>
-							<a href="{{ route('ads.show', $ad->id) }}">{{ $ad->title }}</a>
+              <a class="titulo-anucio" href="{{ route('ads.show', $ad->id) }}">{{ $ad->title }}</a>
 						</h4>
 
-<!-- parei aqui !!!-->
-						<p class="text-justify texto" > {{ $ad->description }}</p>
-            <a href="{{ route('ads.show', $ad->id) }}">
-              <i class="fa fa-external-link" aria-hidden="true">
-              </i>
-            </a>
+            <!--descrição do conteudo-->
+						<p class="text-justify texto">{{ $ad->description }}</p>
 
-						<p>Anunciante:
-						<a  href="{{ route('users.show', $ad->creator->id) }}">{{ $ad->creator->name }}
-							<i class="fa fa-user" aria-hidden="true"></i>
-						</a>
+            <!--usuario do anuncio-->
+						<p class="titulo-user-anuncio">Anunciante:
+  						<a class="user-anucio"  href="{{ route('users.show', $ad->creator->id) }}">{{ $ad->creator->name }}
+  							<i class="fa fa-user" aria-hidden="true"></i>
+  						</a>
 						</p>
-
+            <!--valor da propaganda-->
 						@if ($ad->price == 0)
-							<p style="color: green;">Free<i class="fa fa-gift" aria-hidden="true" style="color:green;"></i></p>
+							<p class="price"style="color: green;">Free<i class="fa fa-gift" aria-hidden="true" style="color:green;"></i></p>
 						@else
-							<p>Preço: {{ $ad->priceF }}</p>
+							<p class="price">Preço: {{ $ad->priceF }}</p>
 						@endif
 
-						<p>Contato: {{ $ad->contact }}</p>
+						<p class="phone">Contato: {{ $ad->contact }}</p>
 					</div>
 				</div>
 			@endforeach
