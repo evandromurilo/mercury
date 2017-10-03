@@ -6,6 +6,10 @@
 
   <link href="{{ asset('css/style_ad_index.css') }}" rel="stylesheet">
 
+	<form method="GET" action="{{ route('ads.search') }}">
+		<input type="text" name="search" />
+		<input type="submit" />
+	</form>
   <!--
       <div class="btn-group-vertical filtro-pesquisa" role="group" aria-label="...">
         <div class="container">

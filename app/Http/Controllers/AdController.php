@@ -43,6 +43,13 @@ class AdController extends Controller
 		}
 	}
 
+	public function search(Request $request) {
+		$ads_page = 8;
+		$ads = Ad::search($request->search)->paginate($ads_page);
+
+		return view('ad.index')->with(['ads' => $ads, 'filter' => 'new']); 
+	}
+
 	public function create() {
 		return view('ad.create');
 	}

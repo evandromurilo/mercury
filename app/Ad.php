@@ -4,9 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Laravel\Scout\Searchable;
 
 class Ad extends Model
 {
+	use Searchable;
+
 	public function getCreatorAttribute()
 	{
 		return User::find($this->user_id);
@@ -25,5 +28,10 @@ class Ad extends Model
 	public function getPriceFAttribute()
 	{
 			return 'R$ ' . number_format($this->price/100.0, 2, '.', ',');
+	}
+
+	public function searchableAs()
+	{
+		return 'ads_index';
 	}
 }

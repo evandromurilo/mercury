@@ -20,6 +20,8 @@ Route::post('post_validate', 'StaticPagesController@post_validate')->name('form'
 
 Auth::routes();
 
+Route::get('ads/search', 'AdController@search')->name('ads.search');
 Route::resource('ads', 'AdController');
 Route::resource('users', 'UserController');
 Route::resource('messages', 'MessageController');
+
