@@ -13,9 +13,9 @@
 						<h1> {{ $user->name }} </h1>
 				<div class="gravata-avatar">
 					@if (Storage::exists('public/users/' . $user->id))
-						<img id="avatar" src="{{ asset(Storage::url('public/users/' . $user->id)) }}">
+						<img id="avatar" src="{{ asset(Storage::url('public/users/' . $user->id)) }}" alt="{{ $user->name }}">
 					@else
-						<img id="avatar" src="{{ $user->gravatar }}?s=120">
+						<img id="avatar" src="{{ $user->gravatar }}?s=120" alt="{{ $user->name }}">
 					@endif
 				</div>
 				<div class="edit-perfil">

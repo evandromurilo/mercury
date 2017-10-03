@@ -33,6 +33,13 @@ h3{
 	box-shadow: 0 6px 6px rgba(16, 16, 16, 0.04), 0 6px 6px rgba(0, 0, 0, 0.05);
 	z-index:999;
 }
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+
 button{
 	background: #42b983;
 	font-family: 'Montserrat', sans-serif;
@@ -48,6 +55,7 @@ button{
 	user-select: none;
 	margin: 0 0 5px 0;
 }
+
 </style>
 
 <template>
@@ -56,12 +64,12 @@ button{
 		 <li id="rows-li">
 			 <i v-show="free" class="fa fa-gift" aria-hidden="true" style="color:green;"></i>
 			 <i v-show="!free" class="fa fa-usd" aria-hidden="true" style="color:#FFD700"></i>
-			 <a :href="this.url" v-on:mouseover="hover" v-on:mouseout="hoverOut">{{ this.title }}</a>
+			 		<a :href="this.url" v-on:mouseover="hover" v-on:mouseout="hoverOut">{{ this.title }}</a>
 		 </li>
 		 <div class="ad-popover" v-if="showPopup" transition="fade"
 											v-on:mouseover="hoverInfo"
 											v-on:mouseout="hoverOutInfo">
-			 <h3>{{ this.title }}</h3>
+			 <h3 style="color:red;">{{ this.title }}</h3>
 			 <p>{{ this.description }}</p>
 			 <p>{{ this.price }}</p>
 			 <a :href="this.url"><button>Ver detalhes</button></a>
