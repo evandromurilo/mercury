@@ -42189,7 +42189,7 @@ exports = module.exports = __webpack_require__(43)(undefined);
 
 
 // module
-exports.push([module.i, "\nbody[data-v-63215f3a]{\r\n\tfont-family: 'Montserrat', sans-serif;\n}\n#app[data-v-63215f3a]{\r\n\theight: 400px;\n}\np[data-v-63215f3a]{\r\n\tfont-size: 14px;\n}\nh3[data-v-63215f3a]{\r\n\tmargin: 5px 0;\n}\n.is-flex[data-v-63215f3a]{\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\talign-items: center;\r\n\tjustify-content: center;\n}\n.inline[data-v-63215f3a]{\r\n\tdisplay: inline-block;\r\n\tposition: relative;\n}\r\n/** posição da tela**/\n.ad-popover[data-v-63215f3a]{\r\n\tposition: absolute;\r\n\twidth: 400px;\r\n\tbackground: #fff;\r\n\tborder: 1px solid #42b983;\r\n\tpadding: 10px 20px;\r\n\tbox-shadow: 0 6px 6px rgba(16, 16, 16, 0.04), 0 6px 6px rgba(0, 0, 0, 0.05);\r\n\tz-index:999;\n}\nbutton[data-v-63215f3a]{\r\n\tbackground: #42b983;\r\n\tfont-family: 'Montserrat', sans-serif;\r\n\tborder: 1px solid #42b983;\r\n\tpadding: 12px;\r\n\tfont-size: 12px;\r\n\tcolor: #fff;\r\n\toutline: none;\r\n\tdisplay: inline-block;\r\n\ttext-align: center;\r\n\tpadding: 6px 12px;\r\n\tborder-radius: 3px;\r\n\tuser-select: none;\r\n\tmargin: 0 0 5px 0;\n}\r\n", ""]);
+exports.push([module.i, "\nbody[data-v-63215f3a]{\r\n\tfont-family: 'Montserrat', sans-serif;\n}\n#app[data-v-63215f3a]{\r\n\theight: 400px;\n}\np[data-v-63215f3a]{\r\n\tfont-size: 14px;\n}\nh3[data-v-63215f3a]{\r\n\tmargin: 5px 0;\n}\n.is-flex[data-v-63215f3a]{\r\n\theight: 100%;\r\n\twidth: 100%;\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\talign-items: center;\r\n\tjustify-content: center;\n}\n.inline[data-v-63215f3a]{\r\n\tdisplay: inline-block;\r\n\tposition: relative;\n}\r\n/** posição da tela**/\n.ad-popover[data-v-63215f3a]{\r\n\tposition: absolute;\r\n\twidth: 400px;\r\n\tbackground: #fff;\r\n\tborder: 1px solid #42b983;\r\n\tpadding: 10px 20px;\r\n\tbox-shadow: 0 6px 6px rgba(16, 16, 16, 0.04), 0 6px 6px rgba(0, 0, 0, 0.05);\r\n\tz-index:999;\n}\na[data-v-63215f3a]{\r\n\ttext-decoration: none;\n}\nli[data-v-63215f3a]{\r\n\tlist-style: none;\n}\nbutton[data-v-63215f3a]{\r\n\tbackground: #42b983;\r\n\tfont-family: 'Montserrat', sans-serif;\r\n\tborder: 1px solid #42b983;\r\n\tpadding: 12px;\r\n\tfont-size: 12px;\r\n\tcolor: #fff;\r\n\toutline: none;\r\n\tdisplay: inline-block;\r\n\ttext-align: center;\r\n\tpadding: 6px 12px;\r\n\tborder-radius: 3px;\r\n\tuser-select: none;\r\n\tmargin: 0 0 5px 0;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -42608,6 +42608,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	props: ['id', 'title', 'description', 'free', 'price', 'url'],
@@ -42712,7 +42720,9 @@ var render = function() {
               on: { mouseover: _vm.hoverInfo, mouseout: _vm.hoverOutInfo }
             },
             [
-              _c("h3", [_vm._v(_vm._s(this.title))]),
+              _c("h3", { staticStyle: { color: "red" } }, [
+                _vm._v(_vm._s(this.title))
+              ]),
               _vm._v(" "),
               _c("p", [_vm._v(_vm._s(this.description))]),
               _vm._v(" "),
