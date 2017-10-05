@@ -6,10 +6,47 @@
 
   <link href="{{ asset('css/style_ad_index.css') }}" rel="stylesheet">
 
-	<form method="GET" action="{{ route('ads.search') }}">
-		<input type="text" name="search" />
-		<input type="submit" />
-	</form>
+
+
+  <nav class="navbar navbar-default sub-menu" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li><a href="{{ route('ads.index', ['o' => 'desc']) }}"
+              class=" {{ $filter == 'new' ? 'active' : '' }}">Mais Recentes</a></li>
+            <li><a href="{{ route('ads.index', ['o' => 'asc']) }}"
+              class=" {{ $filter == 'old' ? 'active' : '' }}">Mais Antigos</a></li>
+            <li><a href="{{ route('ads.index', ['f' => 'm', 'o' => 'asc']) }}"
+              class=" {{ $filter == 'cheap' ? 'active' : '' }}">Mais Baratos</a></li>
+            <li><a href="{{ route('ads.index', ['f' => 'm', 'o' => 'desc']) }}"
+              class=" {{ $filter == 'expensive' ? 'active' : '' }}">Mais Caros</a></li>
+          </ul>
+        <div class="navbar-form navbar-left search-nav" role="search">
+          <form method="GET" action="{{ route('ads.search') }}">
+            <div class="form-group">
+              <input type="text" name="search" class="form-control" placeholder="Ex: Casa...">
+            </div>
+            <button type="submit" class="btn btn-primary btn-busca">Buscar</button>
+          </form>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"></a></li>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-->
+  </nav>
   <!--
       <div class="btn-group-vertical filtro-pesquisa" role="group" aria-label="...">
         <div class="container">
