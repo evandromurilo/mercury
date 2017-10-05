@@ -75,11 +75,11 @@
 																		<li><a href="{{ route('ads.create') }}">Novo Anúncio</a></li>
 																		<li><a href="{{ route('users.show', Auth::user()->id) }}">Perfil</a></li>
 																		@if (Auth::user()->unreadNotifications->isNotEmpty())
-																			<li><a href="{{ route('messages.index') }}">
+																			<li><a href="{{ route('conversations.index') }}">
 																					<spam class="badge">{{ Auth::user()->unreadNotifications->count() }}</spam>																					Mensagens
 																			</a></li>
 																		@else
-																			<li><a href="{{ route('messages.index') }}">Mensagens</a></li>
+																			<li><a href="{{ route('conversations.index') }}">Mensagens</a></li>
 																		@endif
 																		<li>
 																				<a href="{{ route('logout') }}"

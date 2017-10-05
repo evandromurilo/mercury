@@ -42,7 +42,7 @@
 											<adview title="{{ $ad->title }}"   id="{{ $ad->id }}" description="{{ $ad->description }}" price="{{ $ad->priceF }}" url="{{ route('ads.show', $ad->id) }}"></adview>
 										@endif
 										@if (Auth::check())
-											<a class="btn_messages" href="{{ route('messages.create', ['user' => $user->id]) }}">
+											<a class="btn_messages" href="{{ route('conversations.create', ['user' => $user->id]) }}">
 												Enviar Mensagem
 												<i class="fa fa-envelope-o" aria-hidden="true"></i>
 											</a>

@@ -7,25 +7,25 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+	use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var array
+	 */
+	protected $fillable = [
+		'name', 'email', 'password',
+	];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+	/**
+	 * The attributes that should be hidden for arrays.
+	 *
+	 * @var array
+	 */
+	protected $hidden = [
+		'password', 'remember_token',
+	];
 
 	public function getGravatarAttribute()
 	{
@@ -37,5 +37,14 @@ class User extends Authenticatable
 	public function getAdsAttribute()
 	{
 		return Ad::where('user_id', $this->id)->get()->reverse();
+	}
+
+	public function getConversationsAttribute()
+	{
+		return Conversation::where(
+			[['visible', '=', true],
+			['to_id', '=', $this->id]])->orWhere(
+				[['visible', '=', true],
+				['from_id', '=', $this->id]])->get();
 	}
 }

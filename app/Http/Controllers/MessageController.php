@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Ad;
 use App\Message;
+use App\Conversation;
 use App\User;
 use App\Notifications\NewMessage;
 
@@ -15,64 +16,26 @@ class MessageController extends Controller
 		$this->middleware('auth');
 	}
 
-	public function create(Request $request) {
-		$title = '';
-		$to_email = '';
-
-		if ($request->has('ad')) {
-			$ad = Ad::find($request->ad);
-			$title = $ad->title;
-			$to_email = $ad->creator->email;
-		} else if ($request->has('msg')) {
-			$msg = Message::find($request->msg);
-
-			if ($msg->to_id == Auth::id()) {
-				$title = $msg->title;
-				$to_email = $msg->author->email;
-			}
-		} else if ($request->has('user')) {
-			$to_email = User::find($request->user)->email;
-		}
-
-		return view('message.create')->with(['title' => $title, 'to_email' => $to_email]);
-	}
-
 	public function store(Request $request) {
 		$message = new Message;
+		$conversation = Conversation::find($request->conversation_id);
 
-		$message->title = $request->title;
+		if (Auth::id() == $conversation->from_id) {
+						$to_id = $conversation->to_id;
+		} else {
+						$to_id = $conversation->from_id;
+		}
+
 		$message->body = $request->body;
-		$message->to_id = User::where('email', $request->to_email)->first()->id;
+		$message->to_id = $to_id;
 		$message->from_id = Auth::id();
+		$message->conversation_id = $request->conversation_id;
 
 		$message->save();
 		User::find($message->to_id)->notify(new NewMessage($message));
 
 		//return redirect()->route('messages.show', $message->id);
-		return redirect()->route('home');
-	}
-
-	public function index() {
-		$messages = Message::where('to_id', Auth::id())->get();
-		Auth::user()->unreadNotifications()->update(['read_at' => \Carbon\Carbon::now()]);
-
-		return view('message.index')->with('msgs', $messages);
-	}
-
-	public function show(Request $request) {
-		$message = Message::find($request->segment(2));
-
-		if (Auth::id() == $message->to_id) {
-			if (!$message->seen) {
-				$message->seen = true;
-				$message->save();
-			}
-
-			return view('message.show')->with('msg', $message);
-		}
-		else {
-			return redirect()->route('messages.index');
-		}
+		return redirect()->route('conversations.show', $request->conversation_id);
 	}
 
 	public function destroy(Request $request) {

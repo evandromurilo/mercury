@@ -24,4 +24,5 @@ Route::get('ads/search', 'AdController@search')->name('ads.search');
 Route::resource('ads', 'AdController');
 Route::resource('users', 'UserController');
 Route::resource('messages', 'MessageController');
+Route::resource('conversations', 'ConversationController');
 
