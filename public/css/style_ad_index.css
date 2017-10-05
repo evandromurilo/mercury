@@ -8,7 +8,6 @@ img{
   height: 150px;
 }
 
-
 /**SmaerPhone**/
 @media screen and (max-width: 420px){
 
@@ -35,6 +34,11 @@ p{
   align-items: center;
   justify-content: center;
 }
+.sub-menu{
+  margin-top: 30px;
+  background-color: #fff;
+}
+
 }
 /**tablet**/
 @media screen and (max-width: 768px) and (min-width: 421px){
@@ -115,6 +119,13 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.sub-menu{
+  margin-top: 50px;
+  background-color: #fff;
+}
+.search-nav{
+  padding-left: 50px;
 }
 
 }
