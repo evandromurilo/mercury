@@ -37,7 +37,7 @@
 				</a>
 			</p>
 			<p>
-					<a class="style-color" href={{ route('messages.create', ['ad' => $ad->id]) }}>Enviar Mensagem
+					<a class="style-color" href={{ route('conversations.create', ['ad' => $ad->id]) }}>Enviar Mensagem
 						<i class="fa fa-envelope-o" aria-hidden="true"></i>
 					</a>
 			</p>
