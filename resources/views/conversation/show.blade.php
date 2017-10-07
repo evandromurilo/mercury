@@ -21,21 +21,25 @@
 														<a style="color:blue; float: right;" href="{{-- route('users.show', $msg->from_id) --}}"></p>
 															{{-- $msg->author->name --}}
 														</a>-->
-														<p style="background-color: gold;" class="text-right"> {{ $msg->body }} </p>
+														<p style="background: gold;" class="text-right msg-user"> {{ $msg->body }} </p>
 													@else
 														<!--<p>Enviada por:
 														<a style="color:red;" href="{{-- route('users.show', $msg->from_id) --}}"></p>
 															{{-- $msg->author->name --}}
 														</a>-->
-														<p style="background-color: green;" class="text-left"> {{ $msg->body }} </p>
+														<p style="background: green;" class="text-left msg-secundario"> {{ $msg->body }} </p>
 													@endif
 										</div>
 						@endforeach
 
+						<script>
+							$(".msg-user").css({'background-color': 'gold'});
+						</script>
+
 						<!--lista de msg todas as msg-->
 						<form class="form-inline" method="POST" action="{{ route('messages.store') }}">
 									<div class="form-group">
-										<input type="text" class="form-control menssagem" name="body" placeholder="Mensagem...">
+										<input type="text" class="form-control menssagem" autocomplete="off" name="body" placeholder="Mensagem...">
 									</div>
 										<input type="hidden" name="conversation_id" value="{{ $conv->id }}">
 										{{ csrf_field() }}

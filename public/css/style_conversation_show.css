@@ -10,3 +10,17 @@ body{
   background-color: pink;
   height: 80%;
 }
+.form-inline{
+  position: absolute;
+  margin-bottom: 10px;
+}
+.msg-secundario{
+  border-radius: 30px 30px 30px 2px;
+}
+.msg-user{
+  border-radius: 30px 30px 2px 30px;
+}
+p{
+  word-wrap: break-word;
+  font-weight: 200;
+}
