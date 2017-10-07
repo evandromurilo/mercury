@@ -21,13 +21,17 @@
 														<a style="color:blue; float: right;" href="{{-- route('users.show', $msg->from_id) --}}"></p>
 															{{-- $msg->author->name --}}
 														</a>-->
-														<p style="background: gold;" class="text-right msg-user"> {{ $msg->body }} </p>
+														<div>
+															<p style="background: gold;" class="text-right msg-user"> {{ $msg->body }} </p>
+														</div>
 													@else
 														<!--<p>Enviada por:
 														<a style="color:red;" href="{{-- route('users.show', $msg->from_id) --}}"></p>
 															{{-- $msg->author->name --}}
 														</a>-->
-														<p style="background: green;" class="text-left msg-secundario"> {{ $msg->body }} </p>
+														<div>
+															<p style="background: green;" class="text-left msg-secundario"> {{ $msg->body }} </p>
+														</div>
 													@endif
 										</div>
 						@endforeach
@@ -38,14 +42,15 @@
 
 						<!--lista de msg todas as msg-->
 						<form class="form-inline" method="POST" action="{{ route('messages.store') }}">
-									<div class="form-group">
-										<input type="text" class="form-control menssagem" autocomplete="off" name="body" placeholder="Mensagem...">
-									</div>
+									<div class="from-group fixed-bottom input-fixo">
+										<input type="text" class="form-control menssagem" autofocus autocomplete="off" name="body" placeholder="Mensagem...">
+
+
 										<input type="hidden" name="conversation_id" value="{{ $conv->id }}">
 										{{ csrf_field() }}
 
 										<input type="submit" class="btn btn-primary">
-
+</div>
 						</form>
 					<!--end msg-->
 

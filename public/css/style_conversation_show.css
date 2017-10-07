@@ -3,7 +3,7 @@ body{
   padding: 0;
 }
 .menssagem{
-  width: 300px;
+  min-width: 600px;
 }
 
 .well{
@@ -23,4 +23,11 @@ body{
 p{
   word-wrap: break-word;
   font-weight: 200;
+}
+
+.input-fixo {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
 }
