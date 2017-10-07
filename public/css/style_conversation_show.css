@@ -2,7 +2,11 @@ body{
   margin: 0;
   padding: 0;
 }
-
-.mensagem{
+.menssagem{
   width: 300px;
+}
+
+.well{
+  background-color: pink;
+  height: 80%;
 }
