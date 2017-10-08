@@ -9,6 +9,8 @@ body{
 .well{
   background-color: pink;
   height: 80%;
+  overflow: auto;
+  padding-bottom: 50px;
 }
 .form-inline{
   position: absolute;
