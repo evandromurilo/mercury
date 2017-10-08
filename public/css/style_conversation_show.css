@@ -1,35 +1,42 @@
-body{
+body {
   margin: 0;
   padding: 0;
 }
-.menssagem{
+
+.menssagem {
   min-width: 600px;
 }
 
-.well{
-  background-color: pink;
+.well {
+  background-color: #B6BFB7;
   height: 80%;
   overflow: auto;
   padding-bottom: 50px;
 }
-.form-inline{
+
+.form-inline {
   position: absolute;
   margin-bottom: 10px;
 }
-.msg-secundario{
+
+.msg-secundario {
   border-radius: 30px 30px 30px 2px;
 }
-.msg-user{
+
+.msg-user {
   border-radius: 30px 30px 2px 30px;
+  
 }
-p{
+
+p {
   word-wrap: break-word;
   font-weight: 200;
+
 }
 
 .input-fixo {
-    position: fixed;
-    height: 100px;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
 }

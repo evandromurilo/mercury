@@ -6,6 +6,7 @@
 
 	<link href="{{ asset('css/style_conversation_show.css') }}" rel="stylesheet">
 
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
@@ -22,7 +23,7 @@
 															{{-- $msg->author->name --}}
 														</a>-->
 														<div>
-															<p style="background: gold;" class="text-right msg-user"> {{ $msg->body }} </p>
+															<p  class="text-right msg-user"> {{ $msg->body }} </p>
 														</div>
 													@else
 														<!--<p>Enviada por:
@@ -30,14 +31,17 @@
 															{{-- $msg->author->name --}}
 														</a>-->
 														<div>
-															<p style="background: green;" class="text-left msg-secundario"> {{ $msg->body }} </p>
+															<p class=" msg-secundario"> {{ $msg->body }} </p>
 														</div>
 													@endif
 										</div>
 						@endforeach
 
 						<script>
-							$(".msg-user").css({'background-color': 'gold'});
+							$(".msg-user").css({'background-color': '#91A192'});
+						</script>
+						<script>
+							$(".msg-secundario").css({'background-color': '#FFFFFF'});
 						</script>
 
 						<!--lista de msg todas as msg-->
