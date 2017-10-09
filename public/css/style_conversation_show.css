@@ -21,11 +21,14 @@ body {
 
 .msg-secundario {
   border-radius: 30px 30px 30px 2px;
+  display: inline-block;
 }
 
 .msg-user {
   border-radius: 30px 30px 2px 30px;
-  
+  float: right;
+  display: inline-block;
+  clear: both;
 }
 
 p {
