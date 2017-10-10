@@ -69,9 +69,9 @@ button{
 		 <div class="ad-popover" v-if="showPopup" transition="fade"
 											v-on:mouseover="hoverInfo"
 											v-on:mouseout="hoverOutInfo">
-			 <h3 style="color:red;">{{ this.title }}</h3>
-			 <p>{{ this.description }}</p>
-			 <p>{{ this.price }}</p>
+			 <h3 class="text-center">{{ this.title }}</h3>
+			 <label for="">Descrição: </label><p class="text-justify" style="word-wrap: break-all;">{{ this.description }}</p>
+			 <label for="">Valor: </label><p>{{ this.price }}</p>
 			 <a :href="this.url"><button>Ver detalhes</button></a>
 		 </div>
     </div>

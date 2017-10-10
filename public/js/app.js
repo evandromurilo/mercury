@@ -42720,12 +42720,21 @@ var render = function() {
               on: { mouseover: _vm.hoverInfo, mouseout: _vm.hoverOutInfo }
             },
             [
-              _c("h3", { staticStyle: { color: "red" } }, [
+              _c("h3", { staticClass: "text-center" }, [
                 _vm._v(_vm._s(this.title))
               ]),
               _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(this.description))]),
+              _c("label", { attrs: { for: "" } }, [_vm._v("Descrição: ")]),
+              _c(
+                "p",
+                {
+                  staticClass: "text-justify",
+                  staticStyle: { "word-wrap": "break-all" }
+                },
+                [_vm._v(_vm._s(this.description))]
+              ),
               _vm._v(" "),
+              _c("label", { attrs: { for: "" } }, [_vm._v("Valor: ")]),
               _c("p", [_vm._v(_vm._s(this.price))]),
               _vm._v(" "),
               _c("a", { attrs: { href: this.url } }, [
