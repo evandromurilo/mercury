@@ -1,4 +1,4 @@
-'@extends('layouts.master')
+@extends('layouts.master')
 
 @section('title', 'Mensagens')
 
@@ -11,7 +11,10 @@
 		<div class="row">
 		  	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 					<h1>Conversas</h1>
-					<a href="{{ route('conversations.create') }}">Nova conversa</a><br>
+					<a class="link-nova-conversation" href="{{ route('conversations.create') }}">Inicia nova conversa
+						<i class="fa fa-comments-o" aria-hidden="true"></i>
+					</a><br>
+
 		  	</div>
 
 

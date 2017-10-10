@@ -5,6 +5,17 @@ body{
 .well-top{
   margin-top: 150px;
 }
+.link-nova-conversation{
+  color: #000;
+
+}
+.link-nova-conversation:hover{
+  border-bottom: 3px solid #000;
+  color: #000;
+}
+a:link{
+  text-decoration: none;
+}
 
 /**smartphone**/
 @media screen and (max-width: 420px) {

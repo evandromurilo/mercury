@@ -12,6 +12,7 @@ body {
   height: 80%;
   overflow: auto;
   padding-bottom: 50px;
+  scrollbar-face-color: #000;
 }
 
 .form-inline {
@@ -43,3 +44,5 @@ p {
   bottom: 0;
   width: 100%;
 }
+
+scrollbar-face-color: #000;
