@@ -1,0 +1,17 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.well-top{
+  margin-top: 150px;
+}
+
+/**smartphone**/
+@media screen and (max-width: 420px) {
+
+  .well-top{
+    margin-top: 50px;
+  }
+
+
+}
